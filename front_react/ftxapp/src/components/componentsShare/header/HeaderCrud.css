@@ -1,0 +1,187 @@
+
+
+/*   ----  menu   ---*/
+.top-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  background-color: var(--color-fondo-gris-claro);
+  padding: 1rem;
+  border-radius: 8px;
+
+  color: var(--color-texto-claro);
+  margin: .2rem auto;
+  margin-top: 1rem;
+box-sizing: border-box;
+ /* z-index: 1000;*/
+}
+
+.logo {
+  padding-left: 10px;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.close-app {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-texto-claro);
+  padding-right: 10px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.close-app:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-primario-naranja);
+}
+
+/* fin menu */
+
+.seccion-busqueda button:hover {
+  background-image: var(--gradiente-boton-hover);
+  transform: translateY(-1px);
+}
+
+.btn-logout {
+  background-color: var(--color-primario-naranja); /* tu color de marca */
+  color: var(--color-texto-claro);
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+  background-color: var(--gradiente-boton-hover);
+  border: 2px solid var(--color-primario-naranja);/* tono más oscuro al hover */
+}
+
+
+/* conservar tu estilo actual y añadir lo siguiente */
+
+.btn-logout {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: var(--color-primario-naranja);
+  color: var(--color-texto-claro);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border 0.2s ease;
+}
+
+/* icon container: tamaño y centrado */
+.btn-logout .btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  line-height: 0;
+}
+
+/* texto visible por defecto */
+.btn-logout .btn-text {
+  display: inline-block;
+}
+
+/* hover (mantener tu comportamiento) */
+.btn-logout:hover {
+  background-color: var(--gradiente-boton-hover);
+  border: 2px solid var(--color-primario-naranja);
+}
+
+/* focus visible accesible */
+.btn-logout:focus-visible {
+  outline: 2px solid #00000033;
+  outline-offset: 2px;
+}
+
+
+
+
+
+/* Estilos para Desktop (min-width: 768px) */
+@media (min-width: 768px) {
+
+  .logo {
+    padding-left: 20px;
+  }
+
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+
+  .menu-title {
+    font-size: 1.5rem;
+  }
+
+  .close-app {
+    font-size: 1.8rem;
+    padding-right: 20px;
+  }
+}
+
+/* MOBILE: ocultar texto y dejar solo icono (ajusta breakpoint si necesitas) */
+/* @media (max-width: 767px) {
+ .btn-logout .btn-icon svg {
+   color : var(--color-secundario-naranja);
+  }
+
+  .btn-logout .btn-text {
+    display: none;
+  }
+} */
+
+@media (max-width: 767px) {
+  .btn-logout {
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* aplicar color al contenedor para que el SVG herede */
+  .btn-logout .btn-icon {
+    color: var(--color-secundario-naranja);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+  }
+
+  /* asegurar que SVG herede color (stroke o fill según tu icono) */
+  .btn-logout .btn-icon svg {
+    width: 100%;
+    height: 100%;
+    /* para íconos con stroke */
+    stroke: currentColor;
+    /* para íconos con fill (si aplica) */
+    fill: currentColor;
+  }
+
+  .btn-logout .btn-text {
+    display: none;
+  }
+}

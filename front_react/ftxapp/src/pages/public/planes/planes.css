@@ -1,0 +1,202 @@
+/* front_react/ftxapp/src/pages/public/planes/planes.css */
+
+.planes-page {
+  background-color: var(--color-fondo-body);
+  min-height: 100vh;
+  color: var(--color-texto-claro);
+}
+
+/* Encabezado */
+.planes-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.planes-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-texto-claro);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.planes-subtitle {
+  font-size: 1.25rem;
+  color: var(--color-texto-secundario);
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+/* Grid de planes */
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+  align-items: stretch;
+}
+
+.plan-grid-item {
+  display: flex;
+  height: 100%;
+}
+
+.plan-grid-item .plan-card {
+  width: 100%;
+}
+
+/* Estados de carga y error */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.alert {
+  background-color: var(--color-fondo-gris-claro);
+  border: 1px solid var(--color-borde);
+  color: var(--color-texto-claro);
+}
+
+.alert-danger {
+  border-color: var(--color-error);
+  background-color: rgba(231, 76, 60, 0.1);
+}
+
+.alert-heading {
+  color: var(--color-texto-claro);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .planes-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .planes-header {
+    margin-bottom: 2rem;
+  }
+
+  .planes-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .planes-subtitle {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+
+  .planes-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .planes-title {
+    font-size: 2rem;
+  }
+
+  .planes-subtitle {
+    font-size: 1rem;
+  }
+
+  .planes-grid {
+    gap: 1rem;
+  }
+}
+
+/* Ajustes para cuando hay exactamente 3 planes */
+@media (min-width: 992px) {
+  .planes-grid[data-plan-count="3"] {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ajustes para cuando hay exactamente 2 planes */
+@media (min-width: 768px) {
+  .planes-grid[data-plan-count="2"] {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Ajustes para cuando hay solo 1 plan */
+@media (min-width: 768px) {
+  .planes-grid[data-plan-count="1"] {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Animaciones */
+.plan-grid-item {
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.plan-grid-item:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.plan-grid-item:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.plan-grid-item:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.plan-grid-item:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mejoras de accesibilidad */
+.planes-page button:focus,
+.planes-page .plan-card:focus {
+  outline: 2px solid var(--color-primario-naranja);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plan-grid-item {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .plan-card {
+    transition: none;
+  }
+
+  .plan-card:hover {
+    transform: none;
+  }
+}

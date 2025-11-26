@@ -1,0 +1,144 @@
+/* Importar fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Estilos generales */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-fondo-body);
+    color: var(--color-texto-claro);
+}
+
+/* Encabezado */
+.display-4, .lead {
+    color: var(--color-texto-claro);
+}
+.lead.text-muted {
+    color: var(--color-texto-secundario) !important;
+}
+
+
+/* Tarjetas de Planes */
+.card {
+    background-color: var(--color-fondo-gris-claro);
+    border: 1px solid var(--color-borde);
+}
+
+.card-title {
+    color: var(--color-texto-claro);
+}
+
+.card .text-muted {
+    color: var(--color-texto-secundario) !important;
+}
+
+/* Plan Básico */
+.btn-outline-primary {
+    color: var(--color-primario-naranja);
+    border-color: var(--color-primario-naranja);
+}
+.btn-outline-primary:hover {
+    color: var(--color-texto-claro);
+    background-color: var(--color-primario-naranja);
+    border-color: var(--color-primario-naranja);
+}
+
+/* Plan Pro (Popular) */
+.border-warning {
+    border-color: var(--color-primario-naranja) !important;
+}
+.badge.bg-warning {
+    background-color: var(--color-primario-naranja) !important;
+    color: var(--color-texto-claro) !important;
+}
+.btn-warning {
+    background: var(--gradiente-boton);
+    border: none;
+    color: var(--color-texto-claro);
+}
+.btn-warning:hover {
+    background: var(--gradiente-boton-hover);
+    border: none;
+}
+
+
+/* Plan Premium */
+.bg-dark {
+    background-color: var(--color-fondo-mas-oscuro) !important;
+}
+.btn-light {
+    background-color: var(--color-fondo-gris-claro);
+    color: var(--color-texto-claro);
+    border: 1px solid var(--color-borde);
+}
+.btn-light:hover {
+    background-color: #5a5a5a;
+}
+
+
+/* Tabla Comparativa */
+.table {
+    color: var(--color-texto-claro);
+    background-color: var(--color-fondo-gris-claro);
+    border: 1px solid var(--color-borde);
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+.table th, .table td {
+    border-color: var(--color-borde);
+}
+.table thead th {
+    background-color: var(--color-fondo-mas-oscuro);
+    color: var(--color-texto-claro);
+    border-bottom: 2px solid var(--color-primario-naranja);
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: var(--color-fondo-contraste);
+}
+.table-hover>tbody>tr:hover {
+    background-color: #5a5a5a;
+    color: var(--color-texto-claro);
+}
+
+/* Iconos */
+/* Se mantiene el color naranja para los íconos de las tarjetas */
+.card .bi-check-circle-fill {
+    color: var(--color-primario-naranja) !important;
+}
+.card .bi-x-circle-fill {
+    color: var(--color-texto-secundario) !important;
+}
+
+/* Iconos específicos para la tabla comparativa */
+.table .bi-check-lg {
+    color: #198754; /* Verde */
+    font-weight: bold;
+}
+.table .bi-x-lg {
+    color: #dc3545; /* Rojo */
+    font-weight: bold;
+}
+
+/* Alineación de Cabeceras de Tarjetas */
+.card .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid var(--color-borde);
+    padding: 1.5rem;
+    min-height: 200px; /* Altura mínima para alinear */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Ajuste para el plan popular para dejar espacio a la insignia */
+.card.border-warning .card-header {
+    padding-top: 1.5rem;
+}
+
+/* Badge posicionamiento */
+.popular-badge {
+    position: absolute;
+    top: -0.75rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}

@@ -1,0 +1,177 @@
+
+
+.perfil-usuario-container {
+  background-color: var(--color-fondo-gris-claro);
+  width: 100%;
+  color: var(--texto-claro);
+  padding: 1rem;
+  border-radius: 12px;
+  
+  /* border: 1px solid var(--color-primario-naranja); */
+}
+
+.perfil-tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+ background-color: var(--color-fondo-gris-claro);
+ 
+  
+}
+
+.perfil-usuario-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+   border-bottom: 2px solid var(--color-primario-naranja);
+  
+}
+
+.btn-guardar-perfil-usuario {
+  background-color: var(--color-secundario-naranja);
+  color: var(--color-texto-claro);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  max-width: 250px;
+  align-self: flex-end;
+  margin-bottom: .1rem;
+}
+
+.btn-guardar-perfil-usuario:hover {
+  background-color: var(--color-primario-naranja);
+  color: var(--color-texto-oscuro);
+}
+
+.perfil-tab-contenido {
+  background-color: var(--color-fondo-gris-claro);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px var(--color-secundario-naranja-claro);
+  border: 1px solid var(--color-primario-naranja);
+}
+
+.perfil-tabs button {
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+.perfil-tabs .tab-activa {
+  background-color: var(--color-primario-naranja);
+  color: var(--color-texto-negro-grafito);
+  
+  
+
+
+  
+}
+.sin-borde-inferior {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.boton-guardar-perfil {
+
+
+padding: .8rem;
+display: flex;
+flex-direction: row;
+justify-content: right;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  /* 🧩 Contenedor general */
+  .perfil-usuario-container {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .perfil-tabs {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .perfil-usuario-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .perfil-tab-contenido {
+    padding: 0.5rem;
+  }
+
+  
+  .btn-guardar-tab {
+    width: 100%;
+    max-width: none;
+    align-self: stretch;
+  }
+
+  /* 📷 Imagen y contraseña */
+  .imagen-plan-precio {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .imagen-perfil-container,
+  .div-password {
+    max-width: 100%;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .formulario-password {
+    padding: 1rem;
+  }
+
+  .btn-cambiar-password {
+    align-self: stretch;
+    width: 100%;
+  }
+
+  /* 👤 Datos personales */
+  .nombre-apellido,
+  .mail-telefono,
+  .nacimiento-genero {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .nacimiento-genero input,
+  .nacimiento-genero select {
+    min-width: 100%;
+  }
+
+  /* 🏋️ Datos físicos */
+  .peso-estatura,
+  .actividad-metas,
+  .observaciones-boton {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  .actividad-metas select {
+    min-width: 100%;
+  }
+
+  .formulario-fisicos {
+    padding: 1rem;
+  }
+}

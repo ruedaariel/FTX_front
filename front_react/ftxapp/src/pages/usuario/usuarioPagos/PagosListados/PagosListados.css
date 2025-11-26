@@ -1,0 +1,90 @@
+.pagos-wrapper {
+  padding: 1rem;
+}
+
+/* Vista tipo tabla */
+.pagos-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pago-card {
+  background-color:var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.pago-card:nth-child(even) {
+  background-color: var(--color-fondo-mas-oscuro);
+}
+
+.pago-card:hover {
+  
+  border: 2px solid var(--color-texto-claro);
+  
+}
+
+.pago-card.encabezado {
+  background-color:var(--color-fondo-gris-claro);
+  color: var(--color-primario-naranja);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-primario-naranja);
+  /* box-shadow: 0 4px 12px var(--color-primario-naranja); */
+  border: 1px solid var(--color-texto-claro);
+}
+
+.pago-card span {
+  text-align: center;
+  word-break: break-word;
+}
+
+/* Vista tipo card (mobile) */
+.pagos-cards {
+  display: none;
+}
+
+.pago-card-mobile:nth-child(even) {
+  background-color: var(--color-fondo-mas-oscuro);
+}
+.pago-card-mobile {
+  background-color:var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.pago-card-mobile p {
+  margin: 0.5rem 0;
+}
+
+.pago-card-mobile:hover {
+  
+  border: 2px solid var(--color-texto-claro);
+  
+}
+
+/* Breakpoints */
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .pago-card:hover {
+  
+  border: 2px solid var(--color-texto-claro);
+  
+}
+
+  .mobile-only {
+    display: block;
+  }
+}
+

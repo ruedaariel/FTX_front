@@ -1,0 +1,460 @@
+/* ==========================================================================
+   Archivo: style_login.css
+   Descripción: Estilos para las páginas de login, suscripción y perfil.
+   Utilizado en: login_basico.html, login_suscripcion.html, login_perfil.html, reseteo-password.html
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+ * Estilos Generales del Body
+ * Utilizado en: Todos los archivos
+ * -------------------------------------------------------------------------- */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo-body);
+    color: var(--color-texto-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 70px;
+    /* Espacio para el header fijo (altura aprox header + padding + borde) */
+    box-sizing: border-box;
+
+}
+
+/* --------------------------------------------------------------------------
+ * Estilos del Header Fijo
+ * Utilizado en: Todos los archivos
+ * -------------------------------------------------------------------------- */
+header {
+    width: 100%;
+    background-color: var(--color-fondo-mas-oscuro);
+    padding: 1px 10%;
+    box-sizing: border-box;
+    border-bottom: 3px solid var(--color-primario-naranja);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    /* Coincide con el max-width del container */
+    margin: 0 auto;
+}
+
+/*estilos logo*/
+.navbar-brand img {
+    width: 30px;
+    height: auto;
+}
+
+
+/* --------------------------------------------------------------------------
+ Contenedor Principal 
+ Utilizado en: Todos los archivos
+ -------------------------------------------------------------------------- */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 70px);
+    /* Altura menos el padding del body */
+    box-shadow: 0 5px 20px var(--color-sombra-container);
+    overflow: hidden;
+    margin-top: -20px;
+    /* Ajuste para compensar padding-top del body  */
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* --------------------------------------------------------------------------
+ Sección del Video (Izquierda en Desktop)
+ Utilizado en: Todos los archivos
+ -------------------------------------------------------------------------- 
+ */
+.video-section {
+    display: none;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--color-fondo-mas-oscuro);
+}
+
+
+.video-section video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+/* --------------------------------------------------------------------------
+  Sección del Login/Formulario (Derecha en Desktop)
+  Utilizado en: Todos los archivos (con diferente contenido de formulario)
+  -------------------------------------------------------------------------- */
+.login-basico {
+    height: 100vh;
+   
+}
+
+.login-section {
+    width: 100%;
+    padding: 30px 20px;
+ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: var(--color-fondo-mas-oscuro);
+}
+
+.login-section h1 {
+    color: var(--color-primario-naranja);
+    margin-bottom: 8px;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.login-section p {
+    /* Párrafo debajo del H1 */
+    color: var(--color-texto-secundario);
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.login-section form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-section label {
+    margin-bottom: 6px;
+    color: var(--color-primario-naranja-claro);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Estilos base para inputs, selects y textareas */
+.login-section input,
+.login-section select,
+.login-section textarea {
+    padding: 6px 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-borde);
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: var(--color-fondo-claro);
+    color: var(--color-texto-negro-grafito);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.login-section input::placeholder,
+.login-section textarea::placeholder {
+    color: var(--color-texto-negro-grafito-con-transp);
+}
+
+.login-section input:focus,
+.login-section select:focus,
+.login-section textarea:focus {
+    outline: none;
+    border-color: var(--color-borde-focus);
+    box-shadow: 0 0 8px var(--color-sombra-focus);
+}
+
+
+/* --------------------------------------------------------------------------
+ * Sección del modal
+ * Utilizado en: login
+ * -------------------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------------------
+ * Grupos de Inputs (Teléfono, Tarjeta, DNI, Peso, Altura)
+ * Utilizado en: login_suscripcion.html, login_perfil.html
+ * -------------------------------------------------------------------------- */
+.input-group {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+.input-group .prefijo {
+    padding: 6px 12px;
+    background-color: var(--color-fondo-claro);
+    border: 1px solid var(--color-borde);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    color: var(--color-texto-negro-grafito);
+    flex-grow: 0;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    height: auto;
+    /* Ajustar altura automáticamente */
+}
+
+.input-group input {
+    /* Ajusta bordes cuando hay prefijo */
+    border-radius: 0 5px 5px 0;
+    margin-bottom: 0;
+    flex-grow: 1;
+    /* Ocupa espacio restante */
+}
+
+.input-icon-validate {
+    position: relative;
+}
+
+.input-icon-validate input {
+    padding-right: 2.2em !important;
+}
+
+.input-icon-validate .icon-validate {
+    position: absolute;
+    right: 0.6em;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1.2em;
+    display: inline-block; /* Hacer visible el icono */
+    height: 1em;
+    line-height: 1;
+}
+.input-icon-validate .toggle-password {
+    color: var(--color-texto-negro-grafito); /* Asegurar que el icono tenga un color visible */
+}
+.input-icon-validate .icon-validate.valid {
+    color: #28a745;
+    display: inline;
+}
+.input-icon-validate .icon-validate.invalid {
+    color: #dc3545;
+    display: inline;
+}
+
+
+.input-warning {
+    color: #dc3545;
+    font-size: 0.85em;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    min-height: 18px;
+    display: none;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+
+
+/* --------------------------------------------------------------------------
+  Grupo de Radio Buttons (Género)
+  Utilizado en: login_suscripcion.html
+  -------------------------------------------------------------------------- */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-texto-claro);
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+    accent-color: var(--color-primario-naranja);
+    width: auto;
+    margin-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+  Botón de Envío del Formulario - type="button" usado en reseteo_password.html
+  Utilizado en: Todos los archivos
+  -------------------------------------------------------------------------- */
+.login-section button[type="submit"],
+.login-section button[type="button"] {
+    padding: 14px;
+    background: var(--gradiente-boton);
+    color: var(--color-texto-claro);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#cerrar {
+ 
+    color:var(--color-texto-negro-grafito)
+}
+
+.login-section button[type="submit"]:hover 
+.login-section button[type="button"]:hover {
+    background: var(--gradiente-boton-hover);
+    box-shadow: 0 4px 15px var(--color-sombra-boton-hover);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+ Enlace de Registro / Inicio de Sesión Alternativo
+ Utilizado en: login_basico.html, login_suscripcion.html
+ -------------------------------------------------------------------------- */
+.enlace {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-texto-secundario);
+}
+
+.enlace a {
+    color: var(--color-primario-naranja-claro);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.enlace a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   Media Queries para Escritorio (min-width: 769px)
+   Ajustes para layout horizontal y mayor espaciado.
+   ========================================================================== */
+@media (min-width: 769px) {
+
+    .navbar-brand img {
+        width: 40px;
+        height: auto;
+    }
+
+    /* Ajuste del Contenedor Principal en Desktop */
+    .container {
+        flex-direction: row; 
+        width: 90%;
+        height: 85vh; 
+        max-height: 750px;
+        min-height: auto;
+        gap: 0;
+        padding: 0;
+        background-color: transparent;
+        margin-top: 0;
+    }
+
+    /* Ajuste Sección Video en Desktop */
+    .video-section {
+        display: block;
+        order: 1; /* Video a la izquierda */
+        flex: 1; /* Ocupa mitad del espacio */
+        height: 100%;
+        border-radius: 15px;
+        background-color: var(--color-fondo-mas-oscuro);
+        box-shadow: 0 5px 15px var(--color-sombra-container);
+        margin-right: 10px;
+    }
+
+
+    /* Ajuste Sección Login/Formulario en Desktop */
+    .login-section {
+        order: 2; /* Login a la derecha */
+        flex: 1; /* Ocupa la otra mitad */
+        padding: 20px 60px;
+        height: 100%;
+        overflow-y: auto; /* Scroll si el contenido es largo */
+        border-radius: 15px;
+        background-color: var(--color-fondo-mas-oscuro);
+        box-shadow: 0 5px 15px var(--color-sombra-container);
+        justify-content: flex-start; /* Alinear contenido arriba */
+        margin-left: 10px;
+    }
+
+    /* Ajustes de espaciado y tamaño en Desktop */
+    .login-section h1 {
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+    .login-section p {
+        margin-bottom: 15px;
+    }
+
+    .login-section label {
+        margin-bottom: 8px;
+    }
+
+    .login-section input,
+    .login-section select,
+    .login-section textarea,
+    .input-group .prefijo {
+        padding: 8px 14px;
+         border-radius: 8px;
+    }
+
+    .login-section .input-group,
+    .login-section .radio-group {
+        margin-bottom: 20px;
+    }
+
+    .login-section .input-group input {
+        margin-bottom: 0;
+      
+    }
+
+    /* Ajustar bordes para inputs con prefijo en desktop */
+    .input-group .prefijo {
+        border-radius: 8px 0 0 8px;
+    }
+    
+    
+
+    .login-section .radio-group {
+        margin-bottom: 20px;
+    }
+
+    .login-section button[type="submit"] 
+    .login-section button[type="buton"]{
+        margin-top: 25px;
+        padding: 15px;
+        font-size: 1.2rem;
+        border-radius: 8px;
+    }
+
+    .login-section .enlace {
+        margin-top: 5px;
+    }
+
+    .login-section form {
+        max-width: 400px; /* Mantenemos ancho máximo */
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,165 @@
+.ejercicio-rutina-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--color-fondo-body);
+  padding: 0.3rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  
+  
+}
+
+.ejercicio-rutina-field {
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  /* flex: 1; */
+  /* border: 1px solid var(--color-primario-naranja); */
+
+}
+
+.ejercicio-rutina-field label {
+  font-weight: bold;
+  color: var(--color-primario-naranja);
+  margin-bottom: 4px;
+}
+
+
+.ejercicio-rutina-field textarea {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde-input);
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  font-size: 0.95rem;
+  
+  
+}
+
+
+.ejercicio-rutina-field select {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--color-primario-naranja);
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  font-size: 0.95rem;
+  max-width: 200px;
+  
+  
+}
+
+.ejercicio-rutina-field input
+ {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid var(--color-primario-naranja);
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  font-size: 0.95rem;
+  max-width: 120px;
+  
+  
+}
+
+
+.observaciones textarea {
+  min-height: 40px;
+  resize: vertical;
+}
+
+.ejercicio-rutina-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn-ejercicio-agregar,
+.btn-ejercicio-eliminar {
+  padding: 6px 10px;
+  
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: transparent ;
+  /* color: white; */
+}
+
+
+
+
+
+
+.btn-ejercicio-agregar:hover,
+.btn-ejercicio-eliminar:hover {
+  border: 2px solid var(--color-primario-naranja);
+  
+}
+
+.icon-agregar,
+.icon-eliminar {
+  color: var(--color-primario-naranja);
+  font-size: 1.5rem;
+  transition: transform 0.2s ease;
+}
+
+.icon-agregar:hover {
+  transform: rotate(90deg);
+  color: green;
+}
+.icon-eliminar:hover {
+  
+  transform: rotate(90deg);
+  color: red
+}
+
+.input-error {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 2px var(--color-error-sombra);
+}
+
+.error-text {
+  color: var(--color-error);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
+
+@media (max-width: 768px) {
+  .ejercicio-rutina-row {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 0.6rem;
+  }
+
+  .ejercicio-rutina-field {
+    min-width: 100%;
+    flex: unset;
+  }
+
+  .ejercicio-rutina-actions {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+
+  .btn-ejercicio-agregar,
+  .btn-ejercicio-eliminar {
+    font-size: 1.3rem;
+    padding: 8px;
+  }
+
+  .icon-agregar,
+  .icon-eliminar {
+    font-size: 1.8rem;
+  }
+
+  .observaciones textarea {
+    min-height: 60px;
+  }
+}
+

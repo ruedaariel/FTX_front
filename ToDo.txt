@@ -1,0 +1,41 @@
+back:
+revisar el CORS (main.ts cuando se pase a produccion)
+En etapa de produccion pasar el main.ts por ia para ver recomendaciones
+Buscar una solucion para las rutas (no acepta desde scr, y se hace dificil entender en que directorio estan)
+Manejar el warning de punycode que esta señalado como deprecated. Es usada por una dependencia llamada whatwg-url. Se podria actualizar el paquete (npm ls whatwg-url), pero mas adelante
+
+
+
+
+
+Front:
+(*** revisado - arreglado ***) EN ADMIN/RUTINA, CUANDO PONES UN FILTRO Y DESPUES LO QUITAS Y VOLVES A PONER EL FILTRO, QUEDA LA BUSQUEDA ANTERIOR EN LOS CAMPOS (RESETEAR CAMPOS)
+(*** revisado - arreglado ***) EN ADMIN/RUTINA, EL FITRO PARECE QUE NO ANDA
+(*** revisado - arreglado ***) EN ADMIN/RUTINA, OCULTAR EL BOTON DE AGREGAR cLIENTE
+(*** revisado - arreglado ***) EN ADMIN/RUTINA, CAMBIAR EL ESTADO ESTA CONFUSO, ESPECIALMENTE SI ESTA ARCHIVADO PQ APARECE COMO ACTIVO
+(*** revisado - arreglado ***) EN ADMIN/LISTA DE PRECIOS SACAR Y DEJAR PLANES
+EN ADMIN/PLANES, HACER MODIFICAR PLANES (SOLO EL PRECIO)
+(*** revisado - arreglado ***) EN ADMIN/REGISTRAR PAGO MANUAL, QUITAR LOS DIAS ADICIONALES Y AGREGAR UN SELECT CON LOS CLIENTES
+EN ADMIN HACER HISTORIAL DE PAGOS MOSTRAR TODOS ORDENADOS POR FECHA DE PAGO O POR CLIENTE (SI NO SE COMPLICA POR EL ULTIMO MES)
+(*** revisado - arreglado ***) EN ADMIN Y USUARIO  BOTON DE CERRAR SESION.
+(*** revisado - arreglado ***) EN ADMIN MODIFICAR EL CARTEL DEL HEADER
+    
+
+EN USUARIO NO MOSTRAR EL CONTENIDO DEL EJERCICIO O DIRECTAMENTE NO MOSTRAR RUTINAS VIEJAS
+(*** revisado - arreglado ***) EN USUARIO VER LA IMAGEN DE PERFIL
+En usuario/perfil controlar como se visualiza LA FECHA DE NAC
+en usuario/perfil/cambiaR PLAN -> MANDAR UN CORREO AL ADMIN
+EN USUARIO/PLANES PERMITIR CAMBIAR EL PLAN
+EN USUARIO/PAGOS CAMBIAR A HISTORICO DE PAGOS Y HACERLO
+
+EN LANDING PAGE, EN LOS PLANES -> REDIRIGIR A REGISTRAR
+
+admin/rutina:   se hace el elimimar rutina?
+admin/rutina:   revisar reseeo de interfaz al volver de crear rutina exitosa, limpiar Nombre de Rutina
+landing/politicas y terminos: mudar a una pagina estatica
+landing/contacto: enviar formulario al back y que back envie el correo (opciones tarjeta)
+admin/rutina: alguardar semana/dia/ verificar que no haya ejercicios vacios/diasvacioas/semanas ya hay una funcion que lo hace.
+Usar Toast para mensajes sin interaccion con el usuario
+Evitar tantas recargas desde el backend (evitar recargas cada vez que se hace un post, update o delete)
+admin/ejercicio: agregar categoria y agregar filtro por nombre / categoria
+global: cambiar el manejo de token por React Context 

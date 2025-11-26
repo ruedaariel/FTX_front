@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- ==========================================================================
+   Archivo: modificar_perfil.html
+   Descripción: Permite visualizar / modificar los datos del usuario
+   ========================================================================== */-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar Perfil - FTX Fitness</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Estilos propios  -->
+    <link rel="stylesheet" href="./css/modificar_perfil.css">
+    <link rel="stylesheet" href="../css/colores.css">
+</head>
+
+<body>
+    <header>
+        <nav class="top-menu">
+            <a href="./home_usuario.html" class="logo">
+                <img src="../Recursos/IconosLogos/pesaSinLetrasBlanco.png" title="Ir a Home (mi aplicación)"
+                    alt="Logo FTX">
+            </a>
+            <h1 class="menu-title">Mi Perfil</h1>
+            <button class="close-app" onclick="window.location.href='home_usuario.html'">✖</button>
+        </nav>
+    </header>
+
+    <div class="container perfil-container">
+        <h2>Modificar Perfil</h2>
+
+        <!-- Contenedor de Solapas -->
+        <div class="pestañas-container">
+            <div class="btns-pestaña">
+                <button class="pestaña-link active" onclick="abrirPestañaPerfil(event, 'imagenSuscripcion')">Imagen y
+                    Suscripción</button>
+                <button class="pestaña-link" onclick="abrirPestañaPerfil(event, 'datosPersonales')">Datos Personales</button>
+                <button class="pestaña-link" onclick="abrirPestañaPerfil(event, 'datosFisicos')">Datos Físicos</button>
+            </div>
+
+            <form id="perfilForm">
+                <!-- Contenido de Solapa 1: Imagen y Plan y contraseña -->
+                <div id="imagenSuscripcion" class="pestaña-item active">
+                    <div class="perfil-section imagen-perfil-section">
+                        <img src="../Recursos/Imagenes/Imagen2.png" alt="Imagen de Perfil" id="perfilImagenPreview">
+                        <div class="mb-3">
+                            <label for="perfilImagenInput" class="form-label">Cambiar Imagen de Perfil</label>
+                            <input class="form-control" type="file" id="perfilImagenInput" accept="image/*">
+                        </div>
+                    </div>
+                    <div class="perfil-section perfil-subscription-section">
+                        <h2>Plan de Suscripción</h2>
+                        <div class="mb-3">
+                            <label for="plan" class="form-label">Selecciona tu plan:</label>
+                            <select class="form-select" id="plan" name="plan" required>
+                                <option value="mensual">Mensual - 139 USD/ARS</option>
+                                <option value="anual">Anual - (Precio Anual)</option>
+                            </select>
+                        </div>
+                        <p class="text-muted small text-center mt-3">Puedes cambiar tu plan aquí.</p>
+                    </div>
+                    <div class="perfil-section perfil-subscription-section">
+                        <h2>Cambiar Contraseña</h2>
+                        <div class="mb-3">
+                            <label for="contrasena" class="form-label">Contraseña:</label>
+                            <input type="password" class="form-control" id="contrasena" name="contrasena"
+                                placeholder="Tu contraseña" >
+                            <label for="nuevaContrasena" class="form-label">Nueva Contraseña:</label>
+                            <input type="password" class="form-control" id="nuevaContrasena" name="nuevaContrasena"
+                                placeholder="Nueva contraseña" >
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contenido de Solapa 2: Datos Personales -->
+                <div id="datosPersonales" class="pestaña-item">
+                    <div class="perfil-section">
+                        <h2>Datos Personales</h2>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre"
+                                placeholder="Tu nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido:</label>
+                            <input type="text" class="form-control" id="apellido" name="apellido"
+                                placeholder="Tu apellido" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="dni" class="form-label">DNI:</label>
+                            <input type="text" class="form-control" id="dni" name="dni" placeholder="Tu DNI" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email:</label>
+                            <input type="email" class="form-control" id="email" name="email"
+                                placeholder="tuemail@ejemplo.com" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tel" class="form-label">Teléfono:</label>
+                            <div class="input-group">
+                                <span class="input-group-text">+54</span>
+                                <input type="tel" class="form-control" id="tel" name="tel"
+                                    placeholder="11 5555-5555" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenido de Solapa 3: Datos Físicos -->
+                <div id="datosFisicos" class="pestaña-item">
+                    <div class="perfil-section">
+                        <h2>Datos Físicos</h2>
+                        <div class="mb-3">
+                            <label for="actividad" class="form-label">Nivel Actividad Fisica:</label>
+                            <select class="form-select" id="actividad" name="actividad" required>
+                                <option value="diaria">Actividad diaria</option>
+                                <option value="semanal2">Semanal 2 veces</option>
+                                <option value="semanal3">Semanal 3 veces</option>
+                                <option value="sedentario">Sedentario</option>
+                            </select>
+                        </div>
+                        <div class="row g-2 mb-3">
+                            <div class="col-sm-6">
+                                <label for="peso" class="form-label">Tu peso (kg):</label>
+                                <input type="number" step="0.1" class="form-control" id="peso" name="peso"
+                                    placeholder="85.5" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="estatura" class="form-label">Tu estatura (cm):</label>
+                                <input type="number" step="0.01" class="form-control" id="estatura" name="estatura"
+                                    placeholder="185" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="metas" class="form-label">Tus metas:</label>
+                            <select class="form-select" id="metas" name="metas" required>
+                                <option value="perder_peso">Perder Peso</option>
+                                <option value="ganar_musculo">Ganar musculatura</option>
+                                <option value="aerobico">Resistencia Aeróbica</option>
+                                <option value="mantener">Mantener Estado Físico</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="restricciones" class="form-label">Restricciones o Condiciones Médicas:</label>
+                            <textarea class="form-control" id="restricciones" name="restricciones" rows="3"
+                                placeholder="Escribe aquí si tienes alguna condición médica relevante..."></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-guardar">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- Script propio -->
+    <script src="./js/modificar_perfil.js">
+        
+    </script>
+</body>
+
+</html>

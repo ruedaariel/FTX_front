@@ -1,0 +1,131 @@
+.seleccion-usuario-rutina {
+  display: flex;
+  padding: 0.5rem;
+  flex-direction: row;
+  background-color: var(--color-fondo-gris-claro);
+  /* border: 1px solid var(--color-primario-naranja); */
+  border-radius: 8px;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 0.2rem;
+}
+
+.form-group-seleccion-usuario-rutina {
+  margin: 0.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group-seleccion-usuario-rutina label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-primario-naranja);
+}
+
+.form-group-seleccion-usuario-rutina select {
+  font-size: 1rem;
+  padding: 0.4rem;
+  border: 1px solid var(--color-primario-naranja);
+  border-radius: 6px;
+  background-color: var(--color-fondo-body);
+  color: var(--color-texto-claro);
+}
+
+.form-group-seleccion-usuario-rutina select:focus {
+  border-color: var(--color-texto-claro);
+  outline: none;
+}
+
+.form-group-seleccion-usuario-rutina option {
+  padding: 0.5rem;
+}
+
+.datos-rutina-seleccionada {
+  
+    display: flex;
+    flex-direction: column;
+  padding: 0.1rem;
+  background-color: var(--color-fondo-mas-oscuro);
+  border-radius: 8px;
+  color: var(--color-texto-claro);
+  border: 1px solid var(--color-primario-naranja);
+  border-left: 8px solid var(--color-secundario-naranja-claro);
+  border-right: 8px solid var(--color-secundario-naranja-claro);
+  width: 100%;
+}
+
+.datos-rutina-pra-linea, .datos-rutina-sda-linea {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  margin: 0.3rem 0;
+}
+
+.datos-rutina-pra-linea, .datos-rutina-sda-linea p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.datos-columna {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+    
+}
+
+.rotulo-datos {
+    font-weight: 600;
+    color: var(--color-secundario-naranja-claro);
+    font-size: 1.1rem;
+}
+
+/* ✅ Vista solo para móviles */
+@media (max-width: 600px) {
+  .seleccion-usuario-rutina {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .form-group-seleccion-usuario-rutina {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  .form-group-seleccion-usuario-rutina select {
+    font-size: 0.95rem;
+    padding: 0.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .datos-rutina-seleccionada {
+    padding: 0.8rem;
+    border-left: 4px solid var(--color-secundario-naranja-claro);
+    border-right: 4px solid var(--color-secundario-naranja-claro);
+  }
+
+  .datos-rutina-pra-linea,
+  .datos-rutina-sda-linea {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .datos-columna {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .rotulo-datos {
+    font-size: 1rem;
+  }
+
+  .datos-rutina-pra-linea p,
+  .datos-rutina-sda-linea p {
+    font-size: 1rem;
+  }
+}

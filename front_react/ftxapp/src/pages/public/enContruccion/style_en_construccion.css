@@ -1,0 +1,192 @@
+/*==========================================================================
+   Archivo: style_en_construccion.css usado en en_construccion.html
+   Descripción: Estilos para la página de mensionada.
+   ========================================================================== */
+/* 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo-body);
+    color: var(--color-texto-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ */
+
+.container-en-construccion {
+    background-color: var(--color-fondo-mas-oscuro);
+    /* padding: 40px; */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    margin-top: .5rem;
+}
+
+.header-en-construccion {
+    margin-bottom: .3rem;
+    text-align: center;
+}
+
+.logo-en-construccion {
+    max-width: 150px;
+    height: auto;
+}
+
+.h1-en-construccion{
+    font-size: 2.3em;
+    color: var(--color-primario-naranja);
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.p-en-construccion {
+    font-size: 1.1em;
+    color: var(--color-texto-secundario);
+    line-height: 1.6;
+    margin-bottom: .6rem;
+    text-align: center;
+}
+
+.progress-bar-container-en-construccion {
+    width: 80%;
+    margin:auto;
+    background-color: var(--color-fondo-body);
+    border-radius: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    height: 30px;
+    border: 2px solid var(--color-primario-naranja);
+}
+
+.progress-bar-en-construccion {
+    width: 75%; /* Porcentaje de progreso */
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-secundario-naranja), var(--color-primario-naranja));
+    border-radius: 25px 0 0 25px;
+    animation: progressBarAnimation 2s ease-out forwards;
+}
+
+@keyframes progressBarAnimation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 75%;
+    }
+}
+
+.percentage-en-construccion {
+    font-size: 1.1em;
+    color: var(--color-primario-naranja);
+    font-weight: 700;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+.contact-info-en-construccion {
+    margin-top: 40px;
+}
+
+.contact-info-p-en-construccion {
+    font-size: 1em;
+    color: var(--color-texto-secundario);
+    text-align: center;
+}
+
+.social-icons-en-construccion {
+    margin-top: 15px;
+    display: flex;
+  align-items: center;       /* centra verticalmente los iconos */
+  justify-content: center;   /* centra la fila horizontalmente */
+  gap: 1.25rem;              /* separación entre iconos (ajustar) */
+  padding: 0.5rem 0; 
+}
+
+.social-icons a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons-img {
+    width: 60px;
+   /* height: 40px;
+    filter: grayscale(50%) brightness(1.2);*/ 
+}
+
+.social-icons a:hover img {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.1);
+}
+
+.social-icons a:hover {
+    opacity: 1;
+}
+
+.footer-en-construccion {
+    margin-top: .8rem;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-texto-gris-medio);
+}
+
+.footer-p-en-construccion {
+    font-size: 0.9em;
+    color: var(--color-texto-gris-medio);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px;
+    }
+
+    main h1 {
+        font-size: 2.2em;
+    }
+
+    main p {
+        font-size: 1em;
+    }
+
+    .logo {
+        max-width: 120px;
+    }
+
+    .social-icons img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    main p {
+        font-size: 0.9em;
+    }
+
+    .logo {
+        max-width: 100px;
+    }
+    .social-icons a {
+        margin: 0 10px;
+    }
+    .social-icons img {
+        width: 30px;
+        height: 30px;
+    }
+}

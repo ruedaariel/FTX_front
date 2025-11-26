@@ -1,0 +1,362 @@
+/* ==========================================================================
+   Archivo: modificar_perfil_opt.css
+   Descripción: Estilos optimizados para la página de modificar perfil de usuario. DF
+   ========================================================================== */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo-body);
+    color: var(--color-texto-claro);
+    padding-top: 80px;
+}
+
+/* ----------------- Menu ------------------------ */
+.top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--color-fondo-mas-oscuro);
+    padding: 10px 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    border-bottom: 3px solid var(--color-primario-naranja);
+}
+
+.logo {
+    padding-left: 20px;
+}
+
+.logo img {
+    width: 40px;
+    height: auto;
+}
+
+.menu-title {
+    font-size: 1.5rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.close-app {
+    background: transparent;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+    padding-right: 20px;
+}
+
+/* Contenedor Principal del Perfil */
+.perfil-container {
+    padding: 20px;
+    background-color: var(--color-fondo-body);
+    width: 100%;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.perfil-container h2 {
+    color: var(--color-primario-naranja);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    padding-top: 10px;
+}
+
+/* Contenedor de Solapas */
+.pestañas-container {
+    background-color: var(--color-fondo-mas-oscuro);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Botones de Solapa */
+.btns-pestaña {
+    display: flex;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--color-borde);
+    width: 100%;
+}
+
+.btns-pestaña .pestaña-link {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 14px 15px;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    color: var(--color-texto-secundario);
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+    outline: none;
+    white-space: nowrap;
+}
+
+.btns-pestaña .pestaña-link:hover {
+    color: var(--color-primario-naranja-claro);
+}
+
+.btns-pestaña .pestaña-link.active {
+    color: var(--color-primario-naranja);
+    border-bottom-color: var(--color-primario-naranja);
+}
+
+/* Contenido de las Solapas */
+.pestaña-item {
+    display: none;
+    animation: fadeInpestañaContent 0.5s ease-in-out;
+    padding-top: 10px;
+}
+
+.pestaña-item.active {
+    display: block;
+}
+
+@keyframes fadeInpestañaContent {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Secciones Internas de cada Solapa */
+.perfil-section {
+    background-color: transparent;
+    padding: 5px 0;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 0;
+    margin-bottom: 10px;
+    box-shadow: none;
+}
+
+.perfil-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Imagen de Perfil */
+.imagen-perfil-section {
+    text-align: center;
+}
+
+.imagen-perfil-section img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primario-naranja);
+    margin-bottom: 10px;
+    background-color: var(--color-fondo-gris-claro);
+}
+
+/* Títulos de Sección */
+.perfil-subscription-section h2,
+.pestaña-item .perfil-section h2 {
+    color: var(--color-primario-naranja-claro);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 10px;
+}
+
+/* Inputs y Labels */
+.form-control,
+.form-select {
+    background-color: var(--color-fondo-gris-claro);
+    color: var(--color-texto-claro);
+    border: 1px solid var(--color-borde);
+    padding: 12px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.form-control::placeholder {
+    color: var(--color-texto-claro);
+}
+
+.form-control:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--color-borde-focus);
+    box-shadow: 0 0 8px var(--color-sombra-focus);
+    background-color: var(--color-fondo-gris-claro);
+    color: var(--color-texto-claro);
+}
+
+.form-label {
+    color: var(--color-primario-naranja-claro);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.input-group-text {
+    background-color: var(--color-fondo-gris-claro);
+    border: 1px solid var(--color-borde-input);
+    border-right: none;
+    color: var(--color-texto-prefix);
+    padding: 12px 15px;
+    border-radius: 5px 0 0 5px;
+}
+
+.input-group .form-control {
+    border-radius: 0 5px 5px 0;
+}
+
+/* Botón de Guardar Cambios */
+.btn-guardar {
+    padding: 12px 20px;
+    background: var(--gradiente-boton);
+    color: var(--color-texto-boton);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-guardar:hover {
+    background: var(--gradiente-boton-hover);
+    box-shadow: 0 4px 15px var(--color-sombra-boton-hover);
+    transform: translateY(-2px);
+}
+
+/* Media Queries para Desktop */
+@media (min-width: 768px) {
+
+    .btns-pestaña {
+        flex-direction: row;
+        border-bottom: 2px solid var(--color-borde-input);
+    }
+
+    .btns-pestaña .pestaña-link {
+        border-bottom: 3px solid transparent;
+        margin-bottom: 0;
+        border-radius: 0;
+        font-size: 1rem;
+        padding: 14px 15px;
+        white-space: nowrap;
+    }
+
+    .btns-pestaña .pestaña-link.active {
+        background-color: transparent;
+        color: var(--color-primario-naranja);
+        border-bottom-color: var(--color-primario-naranja);
+    }
+
+    .perfil-subscription-section h2,
+    .pestaña-item .perfil-section h2 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .btn-guardar {
+        max-width: 300px;
+        font-size: 1.1rem;
+        padding: 12px 20px;
+
+    }
+}
+
+/* Media Queries para Móvil */
+@media (max-width: 767.98px) {
+
+    .logo {
+        padding-left: 10px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: auto;
+    }
+
+    .menu-title {
+        font-size: 1.2rem;
+    }
+
+    .close-app {
+        font-size: 1.5rem;
+        padding-right: 10px;
+    }
+
+
+
+
+    .perfil-container {
+        padding: 15px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .perfil-container h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        padding-top: 0;
+    }
+
+    .pestañas-container {
+        padding: 15px;
+    }
+
+    .btns-pestaña {
+        flex-direction: column;
+        border-bottom: none;
+        margin-bottom: 15px;
+    }
+
+    .btns-pestaña .pestaña-link {
+        border-bottom: 1px solid var(--color-borde-input);
+        margin-bottom: 5px;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        padding: 10px;
+        white-space: normal;
+    }
+
+    .btns-pestaña .pestaña-link.active {
+        background-color: var(--color-primario-naranja);
+        color: var(--color-texto-boton);
+        border-bottom-color: transparent;
+    }
+
+    .btns-pestaña .pestaña-link:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+
+    .perfil-subscription-section h2,
+    .pestaña-item .perfil-section h2 {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .btn-guardar {
+        max-width: 100%;
+        font-size: 1rem;
+        padding: 12px;
+    }
+}

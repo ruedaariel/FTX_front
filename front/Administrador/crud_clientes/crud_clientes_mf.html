@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- ==========================================================================
+   Archivo:crud_ejercicio.html
+   Descripción: Permite la carga (solo datos personales) de un nuevo cliente, la
+    modificacion de datos basicos y la eliminacion.
+    Permite la busqueda/filtro por distintos campos. 
+   ========================================================================== */-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Clientes</title>
+    <!--  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">-->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="./crud_clientes_mf.css">
+    <link rel="stylesheet" href="../../css/colores.css">
+
+<body>
+    <header>
+        <!--        ----------------  Menu -------------------    -->
+        <nav class="top-menu">
+            <a href="../home_administrador.html" class="logo">
+                <img src="../../Recursos/IconosLogos/logoSinLetrasNaranja.png" title="Ir a Home (mi aplicación)"
+                    alt="Logo FTX">
+            </a>
+            <h1 class="menu-title">Clientes</h1>
+            <button class="close-app" onclick="window.location.href='../home_administrador.html'">✖</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!--Seccion de busqueda-->
+        <div class="seccion-busqueda">
+            <button id="btnDeBusqueda">Buscar/Filtrar</button>
+            <button id="btnResetFiltro">Borrar Filtro</button>
+            <button id="btnNuevoCliente">Agregar Cliente</button>
+        </div>
+        <!--Seccion de clientes con formato para mobile-->
+        <div class="lista-cli-mobile" id="listaClienteMobile">
+        </div>
+        <!--Seccion de clientes con formato para desktop-->
+        <div class="lista-cli-desktop" id="listaClienteDesktop">
+            <table class="tabla-clientes">
+                <thead>
+                    <tr>
+                        <th>DNI</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th>Plan</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="cuerpoTablaClientes">
+                </tbody>
+            </table>
+        </div>
+        <!--modal que permite buscar, agregar o modificar un cliente-->
+        <div id="modalCliente" class="modal">
+            <div class="contenido-modal">
+                <div class="encabezado-modal">
+                    <h2 id="tituloModal">Nuevo Cliente</h2>
+                    <span class="close-btn">&times;</span>
+                </div>
+                <form id="clienteForm" class="modal-form">
+                    <input type="hidden" id="clienteId">
+                    <div class="form-group">
+                        <label for="nro">DNI:</label>
+                        <input type="number" id="nro" name="nro" required min="1">
+                        <div id="nro-error" class="mensaje-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <div id="nombre-error" class="mensaje-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido" required>
+                        <div id="apellido-error" class="mensaje-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo:</label>
+                        <input type="email" id="correo" name="correo" required>
+                        <div id="correo-error" class="mensaje-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="text" id="telefono" name="telefono">
+                        <div id="telefono-error" class="mensaje-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="plan">Plan:</label>
+                        <select id="plan" name="plan" required>
+                            <!-- hacerlo dinamico cuando se integre con Tabla de PLANES-->
+                            <option value="">Seleccione un plan</option>
+                            <option value="Premium">Premium</option>
+                            <option value="Básico">Básico</option>
+                            <option value="Intermedio">Intermedio</option>
+                        </select>
+                        <div id="plan-error" class="mensaje-error"></div>
+                    </div>
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="">Seleccione un estado</option>
+                            <option value="Activo">Activo</option>
+                            <option value="Inactivo">Inactivo</option>
+                        </select>
+                        <div id="estado-error" class="mensaje-error"></div>
+                    </div>
+                    <!--Seccion de botones del modal, segun lo que haga el modal se muestra uno o dos y se cambia el caption-->
+                    <div class="btns-modal">
+                        <button type="submit" id="btnPpalModal">Guardar</button>
+                        <button type="button" id="btnEliminarCliente">Eliminar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="mensaje" class="mensaje"></div>
+    </main>
+
+    <script src="./crud_clientes_mf.js"></script>
+   
+</body>
+
+</html>

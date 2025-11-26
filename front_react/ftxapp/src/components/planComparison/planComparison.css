@@ -1,0 +1,254 @@
+/* front_react/ftxapp/src/components/planComparison/planComparison.css */
+
+.plan-comparison {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.comparison-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.comparison-title {
+  color: var(--color-texto-claro);
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 0;
+}
+
+.comparison-table-container {
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px var(--color-sombra-container);
+  overflow: hidden;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comparison-table {
+  width: 100%;
+  background-color: var(--color-fondo-gris-claro);
+  border-collapse: collapse;
+  margin: 0;
+  color: var(--color-texto-claro);
+}
+
+/* Header */
+.comparison-table thead th {
+  background-color: var(--color-fondo-mas-oscuro);
+  color: var(--color-texto-claro);
+  border-bottom: 2px solid var(--color-primario-naranja);
+  padding: 1rem;
+  font-weight: 600;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.feature-column {
+  text-align: left !important;
+  min-width: 250px;
+  width: 35%;
+}
+
+.plan-column {
+  min-width: 120px;
+  width: auto;
+}
+
+/* Body */
+.comparison-table tbody tr {
+  border-bottom: 1px solid var(--color-borde);
+  transition: background-color 0.2s ease;
+}
+
+.comparison-table tbody tr:hover {
+  background-color: var(--color-fondo-contraste) !important;
+}
+
+.row-even {
+  background-color: var(--color-fondo-gris-claro);
+}
+
+.row-odd {
+  background-color: var(--color-fondo-contraste);
+}
+
+.feature-cell {
+  padding: 1rem;
+  border-right: 1px solid var(--color-borde);
+  color: var(--color-texto-claro);
+  font-weight: 500;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.plan-cell {
+  padding: 1rem;
+  text-align: center;
+  vertical-align: middle;
+  border-right: 1px solid var(--color-borde);
+}
+
+.plan-cell:last-child {
+  border-right: none;
+}
+
+/* Iconos */
+.check-icon {
+  color: #198754;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.cross-icon {
+  color: #dc3545;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* Fila de precios */
+.price-row {
+  background-color: var(--color-fondo-mas-oscuro) !important;
+  border-top: 2px solid var(--color-primario-naranja);
+  font-weight: 600;
+}
+
+.price-row:hover {
+  background-color: var(--color-fondo-mas-oscuro) !important;
+}
+
+.price-label {
+  color: var(--color-texto-claro);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.price-cell {
+  color: var(--color-texto-claro);
+}
+
+.price-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primario-naranja);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .comparison-title {
+    font-size: 1.5rem;
+  }
+
+  .feature-column {
+    min-width: 200px;
+    width: 40%;
+  }
+
+  .plan-column {
+    min-width: 100px;
+  }
+
+  .feature-cell,
+  .plan-cell {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .comparison-table thead th {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .plan-comparison {
+    margin-top: 2rem;
+  }
+
+  .comparison-title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-column {
+    min-width: 150px;
+    width: 45%;
+  }
+
+  .plan-column {
+    min-width: 80px;
+  }
+
+  .feature-cell,
+  .plan-cell {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.85rem;
+  }
+
+  .comparison-table thead th {
+    padding: 0.5rem 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .check-icon,
+.cross-icon {
+  font-size: 0.9rem;
+  margin: 0 auto;
+}
+
+
+  .price-value {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .feature-column {
+    min-width: 120px;
+    width: 50%;
+  }
+
+  .plan-column {
+    min-width: 60px;
+  }
+
+  /* .feature-cell,
+  .plan-cell {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.8rem;
+  } */
+
+.feature-cell,
+.plan-cell {
+  min-height: 48px;
+}
+
+.feature-cell {
+  display: flex;
+  align-items: center;
+}
+
+
+  .comparison-table thead th {
+    padding: 0.4rem 0.2rem;
+    font-size: 0.75rem;
+  }
+
+  .price-value {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-column:nth-child(n+3),
+  .plan-cell:nth-child(n+3) {
+    display: none;
+  }
+}

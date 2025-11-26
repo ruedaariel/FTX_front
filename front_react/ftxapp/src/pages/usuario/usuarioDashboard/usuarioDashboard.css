@@ -1,0 +1,80 @@
+/* front_react/ftxapp/src/pages/AdminDashboard/AdminDashboard.css */
+.admin-dashboard {
+  min-height: 100vh;
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.aviso-legal{
+
+/* border: 2px solid var(--color-primario-naranja);
+border-radius: 6px; */
+margin-bottom: .2rem;
+
+text-align: center;
+justify-content: center;
+
+}
+
+.aviso-legal p{
+color: var(--color-texto-claro);
+text-align: center;
+margin-bottom: 0;
+
+}
+/* .dashboard-main {
+  flex: 1;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+} */
+
+/* Animaciones de entrada */
+.admin-dashboard {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.aviso-legal-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--color-fondo-body);
+  color: var(--color-texto-claro);
+  
+  position: relative;
+}
+
+.aviso-legal-marquee p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: deslizar 12s linear infinite;
+}
+
+@keyframes deslizar {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Responsive para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .dashboard-main {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}

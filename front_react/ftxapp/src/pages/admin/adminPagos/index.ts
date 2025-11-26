@@ -1,0 +1,1 @@
+export { default as PagosAdmin } from './pagosAdmin.jsx';

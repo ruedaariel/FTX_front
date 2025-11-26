@@ -1,0 +1,56 @@
+.selector-usuario-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-fondo-gris-claro);
+  padding: .5rem;
+  border-radius: 12px;
+  color: var(--color-texto-claro);
+}
+
+.selector-usuario-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* o center si preferís */
+  gap: 24px; /* más espacio entre h2 y select */
+  flex-wrap: wrap; /* permite que se acomoden en pantallas chicas */
+}
+
+.selector-usuario-wrapper h2 {
+
+  color: var(--color-primario-naranja);
+  font-size: 1.2rem;
+
+ 
+}
+
+.selector-usuario-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--color-primario-naranja);
+}
+
+select {
+  /* padding: 10px 40px 10px 12px; */
+  border-radius: 8px;
+  border: 1px solid var(--color-borde-input);
+  background-color: var(--color-fondo-body);
+  color: var(--color-texto-claro);
+  font-size: 1rem;
+  appearance: none;
+  min-width: 220px;
+  max-width: 100%;
+  padding: 10px 12px; /* más equilibrado */
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-sombra-focus);
+  border-color: var(--color-borde-focus);
+}
+
+select:hover {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-sombra-focus);
+  border-color: var(--color-borde-focus);
+}

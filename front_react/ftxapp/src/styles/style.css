@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-fondo-body);
+    font-size: 1rem;
+    line-height: 1.45;
+    color: #222;
+    -webkit-font-smoothing: antialiased;
+    /*mejora la legilibilidad*/
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container { max-width: 1300px; margin: 0 auto; padding: 0 1rem; }

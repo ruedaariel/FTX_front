@@ -1,0 +1,44 @@
+/* Contenedor general: ajusta la altura según diseño */
+.hero-image-section {
+  min-height: 420px; /* ajustar para tu layout */
+}
+
+/* fondo e imagen */
+.hero-image-bg {
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.hero-image-bg img.object-cover {
+  object-fit: cover;
+  object-position: center;
+}
+
+/* capa overlay semi-transparente */
+.hero-overlay {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.35);
+}
+
+/* ubicación del logo superpuesto */
+.logo-overlay {
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+/* texto motivacional */
+.hero-text {
+  bottom: 4rem;
+  left: 1.5rem;
+  right: 1.5rem;
+}
+
+/* adaptaciones responsivas */
+@media (min-width: 992px) {
+  .hero-image-section { min-height: 520px; }
+  .logo-overlay { top: 2rem; left: 2rem; }
+  .hero-text { bottom: 5rem; left: 2rem; right: 2rem; }
+}

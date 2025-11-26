@@ -1,0 +1,177 @@
+.avance-rutina {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 10px;
+  padding: .5rem;
+
+
+}
+
+.h2-estadisticas {
+
+color:var(--color-primario-naranja);
+text-align: center;
+
+}
+
+.h3-estadisticas {
+
+color:var(--color-texto-claro);
+text-align: left;
+
+}
+
+.h4-estadisticas {
+
+color:var(--color-texto-claro);
+text-align: left;
+
+}
+
+.graficos {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  /* border: 2px solid var(--color-primario-naranja); */
+  border-radius: 8px;
+  padding: 1rem
+}
+
+.grafico {
+  flex: 1;
+  min-width: 300px;
+  border: 2px solid var(--color-primario-naranja);
+  box-shadow: 0 4px 10px var(--color-secundario-naranja-claro);
+  background-color: var(--color-fondo-contraste);
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 0 auto;
+  min-height: 300px;
+ 
+}
+
+.semana {
+  border: 1px solid var(--color-primario-naranja);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.barra {
+  background-color: var(--color-texto-gris-medio);
+  height: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progreso {
+  background-color: var(--color-primario-naranja);
+  height: 100%;
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+  line-height: 20px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.frase {
+  font-style: italic;
+  color: var(--color-texto-claro);
+}
+
+.dias {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.dia {
+    display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  word-break: break-word;
+}
+
+.dia.actual {
+  background-color: var(--color-secundario-naranja-claro);
+  padding: 0.3rem;
+  border-radius: 6px;
+}
+
+.icono {
+  font-size: 1.2rem;
+}
+.grid-semanas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* fuerza 2 columnas */
+  gap: 1rem;
+  border: 1px;
+}
+
+.grafico-semana {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--color-fondo-contraste);
+  border: 1px solid var(--color-primario-naranja);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  min-width: 0; /* evita overflow horizontal */
+}
+
+.progreso {
+  background-color: #ff6f00;
+  color: #fff;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 4px;
+  transition: width 0.6s ease-in-out;
+}
+
+
+.grafico-semana canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+.grafico canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+}
+
+
+
+@media (max-width: 768px) {
+  .grid-semanas {
+    grid-template-columns: 1fr;
+  }
+
+  .graficos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .grafico {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .grafico-semana {
+    padding: 1rem;
+  }
+
+  .h3-estadisticas,
+  .h4-estadisticas {
+    text-align: center;
+  }
+}

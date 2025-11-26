@@ -1,0 +1,7 @@
+/* tamaños de imagen personalizados para usar con Bootstrap */
+.logo-img-sm { width: 32px; height: 32px; object-fit: contain; }
+.logo-img-md { width: 40px; height: 40px; object-fit: contain; }
+.logo-img-lg { width: 48px; height: 48px; object-fit: contain; }
+
+/* si querés un pequeño efecto hover para el link */
+.hover-opacity:hover { opacity: 0.85; transition: opacity 160ms ease; }

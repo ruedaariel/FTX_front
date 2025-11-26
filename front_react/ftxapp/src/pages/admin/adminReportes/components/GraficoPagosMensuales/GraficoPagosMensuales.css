@@ -1,0 +1,41 @@
+.grafico-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow-x: auto; /* permite scroll horizontal si el canvas se desborda */
+}
+
+.grafico-container canvas {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+/* Título del gráfico */
+.grafico-barras-pagos-mensuales h2 {
+  text-align: center;
+  color: var(--color-primario-naranja);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+/* 📱 Estilos responsive */
+@media screen and (max-width: 768px) {
+  .grafico-container {
+    padding: 0.5rem;
+    margin: 1rem auto;
+    border-radius: 6px;
+  }
+
+  .grafico-container canvas {
+    height: 300px !important;
+  }
+
+  .grafico-barras-pagos-mensuales h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+}

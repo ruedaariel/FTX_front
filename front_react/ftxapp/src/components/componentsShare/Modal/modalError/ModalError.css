@@ -1,0 +1,150 @@
+/* Modal Styles */
+.modal-temporizado {
+    /* position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     white-space: pre-wrap; 
+  word-wrap: break-word;
+  line-height: 1.5; */
+   position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.6); /* oscurece fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Estilo para el borde de éxito en el modal */
+.modal-content-temporizado.modal-success-border {
+    border: 3px solid rgb(24, 156, 24); /* Borde verde */
+    box-shadow: 5px 5px 50px rgba(38, 118, 38, 0.8); /* Sombra verde para destacar el éxito */
+
+}
+
+/* Estilo para el borde de error en el modal */
+.modal-content-temporizado.modal-error-border {
+    border: 3px solid rgb(237, 41, 41);     /* Borde rojo */
+    box-shadow: 5px 5px 30px rgba(151, 31, 31, 0.8); /* Sombra roja para destacar el error */
+}
+
+/* Estilo para el borde de error en el modal */
+.modal-content-temporizado.modal-info-border {
+    border: 3px solid rgb(221, 221, 38); /* Borde amarillo */
+    box-shadow: 5px 5px 30px rgba(255, 179,67, 0.8); /* Sombra amarilla para destacar la advertencia */
+}
+
+
+
+
+
+.modal-content-temporizado {
+    /* background-color: var(--color-fondo-gris-claro); */
+    /* background-color: var(--color-fondo-mas-oscuro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px var(--color-sombra-container);
+    color: var(--color-texto-claro);
+    width: auto;
+    min-width: 280px;
+    max-width: 90%;
+    text-align: center;
+    position: relative; */
+    background-color: var(--color-fondo-mas-oscuro);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px var(--color-sombra-container);
+  color: var(--color-texto-claro);
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+}
+
+.modal-content-temporizado h1 {
+    /* color: var(--color-primario-naranja-claro); */
+    color: #cda658;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.modal-content-temporizado p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    /*agregado VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+    white-space: pre-line;
+}
+
+.close-button-temporizado {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-texto-claro);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button-temporizado:hover {
+    color: var(--color-primario-naranja-claro);
+}
+
+/* @media (min-width: 769px) {
+    .login-section {
+        flex: 1;
+        padding: 40px 60px;
+        border-radius: 15px;
+        margin-left: 10px;
+        overflow-y: auto;
+    }
+
+} */
+
+.barra-progreso-temporizado {
+  width: 100%;
+  height: 6px;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.barra-progreso-fill-temporizado {
+  height: 100%;
+  background-color: var(--color-secundario-naranja);
+  transition: width 0.1s linear;
+}
+
+.modal-buttons-temporizado {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn-confirmar-temporizado,.btn-cancelar-temporizado {
+    background-color: var(--color-primario-naranja-claro);
+    color: var(--color-texto-oscuro);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}

@@ -1,0 +1,50 @@
+/* front_react/ftxapp/src/components/DashboardGrid/DashboardGrid.css */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns, 3), 1fr);
+  gap: var(--grid-gap, 2rem);
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 20px;
+  
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+}
+
+/* Grid con diferentes tamaños */
+.dashboard-grid.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.dashboard-grid.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-grid.grid-2,
+  .dashboard-grid.grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

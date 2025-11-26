@@ -1,0 +1,222 @@
+/* front_react/ftxapp/src/components/planCard/planCard.css */
+
+.plan-card {
+  background-color: var(--color-fondo-gris-claro);
+  border: 1px solid var(--color-borde);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px var(--color-sombra-container);
+  transition: all 0.3s ease;
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 15px var(--color-sombra-container);
+}
+
+.plan-card--popular {
+  border: 2px solid var(--color-primario-naranja);
+  transform: scale(1.05);
+}
+
+.plan-card--popular:hover {
+  transform: scale(1.05) translateY(-4px);
+}
+
+/* Badge popular */
+.popular-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.popular-badge .badge {
+  background-color: var(--color-primario-naranja) !important;
+  color: var(--color-texto-claro) !important;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Header */
+.plan-card__header {
+  background-color: transparent;
+  border-bottom: 1px solid var(--color-borde);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plan-card--popular .plan-card__header {
+  padding-top: 2.5rem;
+}
+
+.plan-card__title {
+  color: var(--color-primario-naranja);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.plan-card__header h2.text-muted {
+  color: var(--color-secundario-naranja-claro)!important;
+}
+
+.plan-card--popular .plan-card__title {
+  font-weight: 700;
+}
+
+.plan-card__price {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-texto-claro);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.plan-card__price-period {
+  font-size: 1.25rem;
+  color: var(--color-texto-secundario);
+  font-weight: 400;
+}
+
+.plan-card__description {
+  color: var(--color-texto-secundario);
+  margin-bottom: 0;
+  font-size: 0.95rem;
+}
+
+/* Body */
+.plan-card__body {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.plan-card__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  flex: 1;
+}
+
+.plan-card__benefit-item {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  color: var(--color-texto-claro);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.plan-card__benefit-item .bi-check-circle-fill {
+  color: var(--color-primario-naranja) !important;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+.plan-card__benefit-item .bi-x-circle-fill {
+  color: var(--color-texto-secundario) !important;
+  margin-right: 0.5rem;
+  margin-top: 0.1rem;
+  flex-shrink: 0;
+}
+
+/* Button */
+.plan-card__button {
+  width: 100%;
+  margin-top: auto;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+/* Variantes del botón */
+.plan-card__button.btn-outline-primary {
+  color: var(--color-primario-naranja);
+  border-color: var(--color-primario-naranja);
+  background-color: transparent;
+}
+
+.plan-card__button.btn-outline-primary:hover {
+  color: var(--color-texto-claro);
+  background-color: var(--color-primario-naranja);
+  border-color: var(--color-primario-naranja);
+  box-shadow: 0 4px 8px var(--color-sombra-boton-hover);
+}
+
+.plan-card__button.btn-warning {
+  background: var(--gradiente-boton);
+  border: none;
+  color: var(--color-texto-claro);
+}
+
+.plan-card__button.btn-warning:hover {
+  background: var(--gradiente-boton-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px var(--color-sombra-boton-hover);
+}
+
+.plan-card__button.btn-light {
+  background-color: var(--color-fondo-claro);
+  color: var(--color-texto-negro-grafito);
+  border: 1px solid var(--color-borde);
+  font-weight: 600;
+}
+
+.plan-card__button.btn-light:hover {
+  background-color: var(--color-texto-secundario);
+  color: var(--color-texto-claro);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Plan Premium (fondo oscuro) */
+.plan-card--premium {
+  background-color: var(--color-fondo-mas-oscuro);
+  color: var(--color-texto-claro);
+}
+
+.plan-card--premium .plan-card__header {
+  border-bottom-color: var(--color-borde);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .plan-card {
+    margin-bottom: 2rem;
+  }
+
+  .plan-card--popular {
+    transform: none;
+    margin-top: 1rem;
+  }
+
+  .plan-card--popular:hover {
+    transform: translateY(-4px);
+  }
+
+  .plan-card__header {
+    min-height: 180px;
+    padding: 1.5rem 1rem;
+  }
+
+  .plan-card__price {
+    font-size: 2.5rem;
+  }
+
+  .plan-card__body {
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,147 @@
+.cards-grid-planes {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+.card-planes {
+  background: var(--color-fondo-gris-claro);
+  color: var(--color-texto-claro);
+  border: 1px solid var(--color-primario-naranja);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 30%;
+  position: relative;
+  min-height: 450px; /* altura mínima uniforme */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: .5rem;
+}
+
+.nombre-planes {
+  margin-bottom: .5rem;
+}
+
+.descripcion-planes,
+.beneficios-planes {
+  flex-grow: 1;
+  
+  height: 30%;
+  /* margin-top: 1rem; */
+  
+}
+
+.card-planes:hover {
+  box-shadow: 0 4px 12px var(--color-primario-naranja);
+  border: 1px solid var(--color-texto-claro);
+}
+
+/* Títulos y párrafos */
+.card-planes h3,
+.card-planes p {
+  margin-top: .2rem;
+  margin-bottom: .4rem;
+  
+}
+
+.p-descripcio-beneficios-planes {
+  
+  /* border-bottom: 1px solid var(--color-primario-naranja);
+  border-right: 1px solid var(--color-texto-claro); */
+  padding-right: .3rem;
+  color: var(--color-primario-naranja);
+}
+
+
+
+/* Encabezado con ID y botón */
+.card-header-planes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  
+}
+
+/* Botones */
+.btn-editar-planes,
+.btn-guardar-planes,
+.btn-cancelar-planes {
+  border: none;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-botones-planes {
+  display: flex;
+  gap: 0.5rem;
+}
+.btn-editar-planes {
+  background-color: var(--color-primario-naranja);
+  border-radius: 6px;
+  color:var(--color-texto-claro);
+}
+
+.btn-guardar-planes {
+  background-color: var(--color-primario-naranja);
+  border-radius: 6px;
+  color:var(--color-texto-claro);
+}
+
+.btn-cancelar-planes {
+  background-color: var(--color-primario-naranja);
+  border-radius: 6px;
+  color:var(--color-texto-claro);
+}
+
+/* Precio destacado */
+.precio {
+  color: var(--color-primario-naranja);
+  font-size: 2rem;
+  margin-top: 1rem;
+  text-align: right;
+}
+
+/* Inputs y textareas en modo edición */
+.form-embebida input,
+.form-embebida textarea {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: none;
+  background-color: #2a2a2a;
+  color: white;
+}
+
+.form-embebida label {
+  color: var(--color-primario-naranja);
+  margin-bottom: .2rem;
+}
+
+/* Mensaje de error */
+.error {
+  color: red;
+  font-size: 0.8rem;
+}
+
+/* Responsive: tablets y móviles */
+@media (max-width: 1024px) {
+  .card-planes {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-planes {
+    width: 100%;
+  }
+
+  .cards-grid-planes {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}

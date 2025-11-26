@@ -1,0 +1,111 @@
+{
+    "nombreRutina": "Fuerza ",
+        "estadoRutina": "activa",
+            "idUsuario": 1,
+                "semanas": [
+                    {
+                        "nroSemana": "1",
+                        "estadoSemana": "en proceso",
+                        "dias": [
+                            {
+                                "nroDia": "1",
+                                "focus": "Pecho y tríceps",
+                                "ejerciciosRutina": [
+                                    {
+                                        "repeticiones": "4x10",
+                                        "dificultad": "media",
+                                        "peso": 60,
+                                        "observaciones": "Última serie al fallo",
+                                        "idEjercicioBasico":3
+                                    },
+                                    {
+                                        "repeticiones": "3x12",
+                                        "dificultad": "baja",
+                                        "peso": 20,
+                                        "idEjercicioBasico":6
+                                    }
+                                ]
+                            },
+                            {
+                                "nroDia": "2",
+                                "focus": "Espalda y bíceps",
+                                "ejerciciosRutina": [
+                                    {
+                                        "repeticiones": "4x8",
+                                        "dificultad": "alta",
+                                        "peso": 70,
+                                        "idEjercicioBasico":1
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nroSemana": "2",
+                        "estadoSemana": "en proceso",
+                        "dias": [
+                            {
+                                "nroDia": "1",
+                                "focus": "Pecho y tríceps",
+                                "ejerciciosRutina": [
+                                    {
+                                        "repeticiones": "4x10",
+                                        "dificultad": "media",
+                                        "peso": 60,
+                                        "observaciones": "Última serie al fallo",
+                                        "idEjercicioBasico":3
+                                    },
+                                    {
+                                        "repeticiones": "3x12",
+                                        "dificultad": "baja",
+                                        "peso": 20,
+                                        "idEjercicioBasico":6
+                                    }
+                                ]
+                            },
+                            {
+                                "nroDia": "2",
+                                "focus": "Espalda y bíceps",
+                                "ejerciciosRutina": [
+                                    {
+                                        "repeticiones": "4x8",
+                                        "dificultad": "alta",
+                                        "peso": 70,
+                                        "idEjercicioBasico":1
+                                    }
+                                ]
+                            },
+                            {
+                                "nroDia": "3",
+                                "focus": "Piernas",
+                                "ejerciciosRutina": [
+                                    {
+                                        "repeticiones": "4x10",
+                                        "dificultad": "media",
+                                        "peso": 80,
+                                        "observaciones": "Mantener la espalda recta",
+                                        "idEjercicioBasico":5
+                                    }
+                                ]
+                            },
+                            {
+                                "nroDia": "4",
+                                "focus": "Hombros",
+                                "ejerciciosRutina": [
+                                    {
+                                        "repeticiones": "3x15",
+                                        "dificultad": "baja",
+                                        "peso": 15,
+                                        "idEjercicioBasico":4
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "nroSemana": "3",
+                        "estadoSemana": "pendiente",
+                        "dias": []
+                    }
+                ]
+}

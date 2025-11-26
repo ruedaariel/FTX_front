@@ -1,0 +1,186 @@
+/* front_react/ftxapp/src/pages/PagosAdmin/PagosAdmin.css */
+.pagos-admin {
+  min-height: 100vh;
+  background-color: var(--color-fondo-body);
+  padding: 2rem;
+}
+
+.pagos-admin-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding: .5rem 0;
+}
+
+.page-title {
+  color: var(--color-texto-claro);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  background: var(--gradiente-boton);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  color: var(--color-texto-claro-con-transp);
+  font-size: 1.2rem;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.pagos-admin-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.actions-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.action-card {
+  background-color: var(--color-fondo-claro);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px var(--color-sombra-container);
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.action-card:not(.disabled):hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--color-sombra-container);
+  border-color: var(--color-primario-naranja);
+}
+
+.action-card.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--color-primario-naranja);
+  background-color: rgba(255, 111, 0, 0.1);
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.action-card:not(.disabled):hover .card-icon {
+  background-color: rgba(255, 111, 0, 0.2);
+  transform: scale(1.1);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-title {
+  color: var(--color-texto-negro-grafito);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 1rem 0;
+}
+
+.card-description {
+  color: var(--color-texto-negro-grafito-con-transp);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 2rem 0;
+  flex: 1;
+}
+
+.action-button {
+  min-width: 180px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .actions-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .pagos-admin {
+    padding: 1rem;
+  }
+  
+  .pagos-admin-header {
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1rem;
+  }
+  
+  .actions-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .action-card {
+    padding: 1.5rem;
+  }
+  
+  .card-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .card-title {
+    font-size: 1.3rem;
+  }
+  
+  .card-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .actions-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-card {
+    padding: 1rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .action-button {
+    width: 100%;
+    min-width: auto;
+  }
+}

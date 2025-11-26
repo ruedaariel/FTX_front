@@ -1,0 +1,12 @@
+TAREAS PENDIENTES FRONT
+
+Agregar el código de país en el teléfono del USUARIO. Actualmente aparece solo argentina y no se puede modificarDonde?
+REGISTRAR (login_suscripcion)
+Agregar la opción Nuevo en el selector de rutinas y modificar el js para crear una nueva rutinaDonde: crea_rutinaAgregar la observación del día (o deberíamos sacarla)?? (SERIA EL FOCUS)Crea_rutina 
+rutinaAgregar un modal para decidir si se selecciona una rutina hecha, si se va a modificar o si se la va a usar como plantilla.
+si se modifica, el nombre del usuario no debería poder modificarse.
+EN el caso de plantilla, no debe cargarse el usuario y  debe seleccionar el nuevo usuario Crea_rutinaEn cliente (ADMIN) agregarCliente hay que bloquearlo pero no eliminarlo o ver que hacemos para que pueda ingresar el usuario (eso es lo que se hacia mas complejo)Crud_clientes
+TAREAS PENDIENTES BACK
+Ver como hacemos el borrado de rutinas (soft o hard) Borrado de usuario (soft) 
+¿Qué pasa si quiero borrar un usuario que ya está borrado? Controlar en usuario si esta borrado o no ¡!!!! Como el borrado es soft, nos trae los borrados y los no borradosControlar el asunto del mail. Si el usuario está borrado, pero existe el mail ¿Qué hacemos????
+En la creación y en el ingresoSi no quiero error sino un Warning ¿Cómo hago? Por ejemplo, no se pudo subir el archivo pero se guarda el ejercicio, Devuelve el objeto pero también quiero que devuelva un mensaje

@@ -1,0 +1,110 @@
+ /* ==========================================================================
+   Archivo: crud_clientes_mf.css
+   Descripción: (MF) Estilos para la página crud_clientes (se accede desde el home_administrador)
+   tiene 2 estilos para listar los clientes: dektop (tabla - botones de accion) y mobile(cards - actions-icon)
+   ========================================================================== */
+
+
+ body {
+
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     /*font-family: 'Inter', sans-serif;*/
+     background-color: var(--color-primario-naranja);
+     color: var(--color-texto-claro);
+     margin: 0;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     min-height: 100vh;
+     box-sizing: border-box;
+     padding-top: 80px;
+     /*espacio para el menu*/
+ }
+
+ /*   ----  menu   ---*/
+ .top-menu {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     width: 100%;
+     background-color: var(--color-fondo-mas-oscuro);
+     padding: 10px 0px;
+     position: fixed;
+     top: 0;
+     left: 0;
+     z-index: 1000;
+     
+ }
+
+
+ .logo {
+     padding-left: 10px;
+ }
+
+ .logo img {
+     width: 30px;
+     height: auto;
+ }
+
+ .menu-title {
+     font-size: 1.2rem;
+     text-align: center;
+     flex-grow: 1;
+ }
+
+ .close-app {
+     background: transparent;
+     border: none;
+     font-size: 1.5rem;
+     cursor: pointer;
+     color: var(--color-texto-claro);
+     padding-right: 10px;
+     transition: background-color 0.2s ease, color 0.2s ease;
+ }
+
+ .close-app:hover {
+     background-color: rgba(255, 255, 255, 0.1);
+     color: var(--color-primario-naranja);
+ }
+
+ /* fin menu */
+
+ 
+
+
+
+
+
+
+ .seccion-busqueda button:hover {
+     background-image: var(--gradiente-boton-hover);
+     transform: translateY(-1px);
+ }
+
+
+
+
+
+ /* Estilos para Desktop (min-width: 768px) */
+ @media (min-width: 768px) {
+
+     .logo {
+         padding-left: 20px;
+     }
+
+     .logo img {
+         width: 40px;
+         height: auto;
+     }
+
+     .menu-title {
+         font-size: 1.5rem;
+     }
+
+     .close-app {
+         font-size: 1.8rem;
+         padding-right: 20px;
+     }
+
+    }

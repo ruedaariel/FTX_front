@@ -1,0 +1,102 @@
+/* Contenedor principal de la barra de búsqueda */
+.seccion-busqueda-react {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  /* width: 90%; */
+  margin: 1rem auto;
+  background-color: var(--color-fondo-gris-claro);
+  border-bottom: 1px solid var(--color-borde);
+  border-radius: 8px;
+  gap: 1rem;
+}
+
+/* Grupo de radio buttons en disposición horizontal */
+.grupo-radios-horizontal {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid #ff8f00;
+  border-radius: 8px;
+  padding: 0.5rem;
+  flex-wrap: wrap; /* 🔥 clave para mantenerlos en una línea */
+  overflow-x: auto;   /* permite scroll si el espacio es muy reducido */
+}
+
+/* Estilo base para cada opción de radio */
+.radio-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--color-texto-claro);
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 0.3s ease;
+}
+
+/* Estilo para el input radio */
+.radio-opcion input[type="radio"] {
+  accent-color: var(--color-secundario-naranja);
+  transform: scale(1.2);
+}
+
+/* Estilo cuando la opción está activa */
+.radio-opcion.activo {
+  background-color: var(--color-secundario-naranja);
+  color: white;
+}
+
+/* Grupo de botones de acción */
+.grupo-botones {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Estilo individual de los botones */
+.grupo-botones button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background-image: var(--gradiente-boton);
+  color: var(--color-texto-claro);
+  cursor: pointer;
+  transition: background-image 0.3s ease, transform 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.grupo-botones button:hover {
+  background-image: var(--gradiente-boton-hover);
+  transform: translateY(-1px);
+}
+
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 480px) {
+  .seccion-busqueda-react {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grupo-radios-horizontal {
+    justify-content: flex-start;
+    overflow-x: auto;
+      
+  }
+
+  .grupo-botones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .grupo-botones button {
+    width: 100%;
+    max-width: 300px;
+  }
+}

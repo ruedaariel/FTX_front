@@ -1,0 +1,234 @@
+/* Contenedor general de cards */
+.contenedor-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  /* padding: 1rem; */
+  width: 100%;
+  
+  
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor-cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .card-usuario {
+    flex: 0 1 calc(32% - .3rem);
+    max-width: 500px;
+    animation: fadeSlideUp 0.6s ease forwards;
+    opacity: 0;
+  }
+}
+
+/* Card individual */
+.card-usuario {
+  background-color: var(--color-fondo-gris-claro);
+  border: 1px solid var(--color-borde);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px var(--color-secundario-naranja);
+  color: var(--color-texto-claro);
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-usuario:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 10px var(--color-primario-naranja);
+}
+
+/* Tabs */
+.tabs-usuario {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-secundario-naranja);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--color-texto-claro);
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.tab-btn.active {
+  border: 2px solid var(--color-secundario-naranja);
+  background-color: var(--color-secundario-naranja);
+  color: white;
+  z-index: 2;
+}
+
+.tab-btn.disabled {
+  background-color: transparent;
+  color: var(--color-texto-claro-con-transp);
+  cursor: not-allowed;
+  opacity: 0.6;
+  border: none;
+}
+
+.tab-btn:hover {
+  background-color: var(--color-primario-naranja);
+  color: white;
+}
+
+.basicos-grid {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  background-color: var(--color-fondo-gris-claro);
+  padding: 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-borde);
+}
+
+/* Imagen */
+.col-imagen {
+  grid-row: 1 / 2;
+  grid-column: 3 / 3;
+  display: flex;
+  margin: auto;
+  padding-right: 10px;
+ 
+}
+
+* Plan y Estado */
+.col-datos {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.imagen-box {
+  width: 110px;
+  height: 110px;
+  background-color: var(--color-fondo-mas-oscuro);
+  border: 2px solid var(--color-secundario-naranja);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formato-imagen {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  
+  
+}
+
+
+
+.dato-linea {
+  font-size: 0.95rem;
+  color: var(--color-texto-claro);
+  border-bottom: 1px solid var(--color-borde);
+  padding-bottom: 1rem;
+}
+
+.dato-linea-personales {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: var(--color-texto-claro);
+  border-bottom: 1px solid var(--color-borde);
+  border-left: 1px solid var(--color-borde);
+  padding-bottom: 0.3rem;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
+.dato-linea-personales strong {
+  color: var(--color-texto-claro);
+}
+/* Email y Nombre en línea */
+.fila-inferior {
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+.fila-inferior-1 {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.dato-horizontal {
+  font-size: 0.9rem;
+  color: var(--color-texto-claro);
+}
+
+.dato-horizontal strong {
+  margin-right: 0.3rem;
+  color: var(--color-texto-claro);
+}
+
+/* Botones de acción */
+.acciones-card {
+  display: flex;
+  justify-content: right;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn-editar,
+.btn-eliminar {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.btn-editar {
+  background-image: var(--gradiente-boton);
+}
+
+.btn-eliminar {
+  background-color: rgb(178, 18, 18)!Important;
+}
+
+.btn-editar:hover,
+.btn-eliminar:hover {
+  background-image: var(--gradiente-boton-hover);
+}
+
+/* Animación */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+

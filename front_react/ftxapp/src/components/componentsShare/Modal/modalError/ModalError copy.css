@@ -1,0 +1,187 @@
+/* Contenido combinado de colores.css, style_login.css y style_reseteo_modal.css */
+
+:root {
+    /* Colores de Fondo */
+    --color-fondo-body: #343434;
+    --color-fondo-gris-claro: #4a4a4a;
+    --color-fondo-mas-oscuro: #232323;
+    --color-fondo-contraste: #343a40;
+    --color-fondo-mas-oscuro-con-transp: rgba(35, 35, 35, 0.95);
+    --color-fondo-claro: #F0F0F0;
+
+    /* Colores de Texto */
+    --color-texto-claro: #ffffff;
+    --color-texto-claro-con-transp: rgba(255, 255, 255, 0.6);
+    --color-texto-gris-medio: #6c757d;
+    --color-texto-secundario: #b0b0b0;
+    --color-texto-negro-grafito: #1C1C1C;
+    --color-texto-negro-grafito-con-transp: rgba(28, 28, 28, 0.7);
+
+    /* Colores Primarios (Naranja) */
+    --color-primario-naranja: #ff6f00;
+    --color-primario-naranja-claro: #ff8f00;
+    --color-secundario-naranja: #E65100;
+    --color-marron-naranja: #2a1507;
+
+    /* Colores de Bordes y Sombras */
+    --color-sombra-container: rgba(0, 0, 0, 0.4);
+    --color-borde: rgba(255, 255, 255, 0.2);
+    --color-borde-input: #555;
+    --color-borde-sombra-focus: rgba(227, 211, 211, 0.2);
+    --color-borde-focus: var(--color-primario-naranja);
+    --color-sombra-focus: rgba(255, 111, 0, 0.4);
+    --color-sombra-boton-hover: rgba(255, 111, 0, 0.3);
+
+    /* Gradientes */
+    --gradiente-boton: linear-gradient(to right, var(--color-primario-naranja), var(--color-secundario-naranja));
+    --gradiente-boton-hover: linear-gradient(to right, var(--color-secundario-naranja), var(--color-primario-naranja));
+}
+
+
+
+
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn-confirmar {
+  background-image: var(--gradiente-boton);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  background-color: var(--color-secundario-naranja);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilo para el borde de éxito en el modal */
+.modal-content.modal-success-border {
+    border: 3px solid rgb(24, 156, 24); /* Borde verde */
+    box-shadow: 5px 5px 50px rgba(38, 118, 38, 0.8); /* Sombra verde para destacar el éxito */
+
+}
+
+/* Estilo para el borde de error en el modal */
+.modal-content.modal-error-border {
+    border: 3px solid rgb(237, 41, 41);     /* Borde rojo */
+    box-shadow: 5px 5px 30px rgba(151, 31, 31, 0.8); /* Sombra roja para destacar el error */
+}
+
+/* Estilo para el borde de error en el modal */
+.modal-content.modal-info-border {
+    border: 3px solid rgb(221, 221, 38); /* Borde amarillo */
+    box-shadow: 5px 5px 30px rgba(255, 179,67, 0.8); /* Sombra amarilla para destacar la advertencia */
+}
+
+
+
+
+
+.modal-content {
+    /* background-color: var(--color-fondo-gris-claro); */
+    background-color: var(--color-fondo-mas-oscuro);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px var(--color-sombra-container);
+    color: var(--color-texto-claro);
+    width: auto;
+    min-width: 280px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h1 {
+    /* color: var(--color-primario-naranja-claro); */
+    color: #cda658;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.6rem;
+}
+
+.modal-content p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+    /*agregado VERRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR */
+    white-space: pre-line;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-texto-claro);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: var(--color-primario-naranja-claro);
+}
+
+@media (min-width: 769px) {
+    
+
+    .login-section {
+        flex: 1;
+        padding: 40px 60px;
+        border-radius: 15px;
+        margin-left: 10px;
+        overflow-y: auto;
+    }
+
+
+
+
+
+}
+.barra-progreso {
+  width: 100%;
+  height: 6px;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 12px;
+}
+
+.barra-progreso-fill {
+  height: 100%;
+  background-color: var(--color-secundario-naranja);
+  transition: width 0.1s linear;
+}

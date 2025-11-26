@@ -1,0 +1,65 @@
+.grupo-radios-horizontal {
+  display: flex;
+  gap: 5px;
+  justify-content: flex-start;
+  align-items: center;
+  border: 2px solid var(--color-primario-naranja);
+  border-radius: 8px;
+  padding: 0.3rem;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  background-color: var(--color-fondo-gris-claro);
+}
+
+/* Botones de opción */
+.radio-opcion {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+  color: var(--color-texto-claro);
+  cursor: pointer;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+}
+
+/* Ocultar el input nativo */
+.radio-opcion input {
+  display: none;
+}
+
+/* Estilo del botón activo */
+.radio-opcion.activo {
+  background-color: var(--color-primario-naranja);
+  color: var(--color-texto-claro);
+  border: 1px solid var(--color-sombra-focus-naranja);
+  box-shadow: 0 0 4px var(--color-sombra-focus-naranja);
+}
+
+/* Hover y focus para accesibilidad */
+.radio-opcion:hover,
+.radio-opcion:focus-within {
+  background-color: var(--color-sombra-boton-hover);
+  transform: scale(1.02);
+}
+
+/* Vista mobile */
+@media (max-width: 768px) {
+  .grupo-radios-horizontal {
+    flex-direction: row;
+    align-items: stretch; 
+    gap: 10px;
+    padding: 0.6rem;
+  }
+
+  .radio-opcion {
+    justify-content: center;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+}

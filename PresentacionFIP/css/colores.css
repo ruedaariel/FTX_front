@@ -1,0 +1,47 @@
+/* --------------------------------------------------------------------------
+ * Variables CSS de Color Globales
+ * Utilizado en: Todos los archivos
+ * -------------------------------------------------------------------------- */
+:root {
+    /* Colores de Fondo */
+    --color-fondo-body: #343434;
+    --color-fondo-gris-claro: #4a4a4a;
+    --color-fondo-mas-oscuro: #232323;
+    --color-fondo-contraste: #343a40;
+    --color-fondo-mas-oscuro-con-transp: rgba(35, 35, 35, 0.95);
+    --color-fondo-claro: #F0F0F0;
+
+    /* Colores de Texto */
+    --color-texto-claro: #ffffff;
+    --color-texto-claro-con-transp: rgba(255, 255, 255, 0.6);
+    --color-texto-gris-medio: #6c757d;
+    --color-texto-secundario: #b0b0b0;
+    --color-texto-negro-grafito: #1C1C1C;
+    --color-texto-negro-grafito-con-transp: rgba(28, 28, 28, 0.7);
+
+
+    /* Colores Primarios (Naranja) */
+    --color-primario-naranja: #ff6f00;
+    --color-primario-naranja-claro: #ff8f00;
+    --color-secundario-naranja: #E65100;
+    --color-marron-naranja: #2a1507;
+
+    /* Colores de Bordes y Sombras */
+    --color-sombra-container: rgba(0, 0, 0, 0.4);
+    --color-borde: rgba(255, 255, 255, 0.2);
+    --color-borde-input: #555;
+    --color-borde-sombra-focus: rgba(227, 211, 211, 0.2);
+    --color-borde-focus: var(--color-primario-naranja);
+    --color-sombra-focus: rgba(255, 111, 0, 0.4);
+    --color-sombra-boton-hover: rgba(255, 111, 0, 0.3);
+
+    /* Gradientes */
+    --gradiente-boton: linear-gradient(to right, var(--color-primario-naranja), var(--color-secundario-naranja));
+    --gradiente-boton-hover: linear-gradient(to right, var(--color-secundario-naranja), var(--color-primario-naranja));
+
+    --gradiente-boton-blanco: linear-gradient(to right, #FFFFFF, #FFD580, var(--color-primario-naranja));
+
+    /* (135deg, #FFFFFF 30%, #FFA500 100%);*/
+
+    /* -----------------------------------------------------------------------------------*/
+}

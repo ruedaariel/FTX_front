@@ -1,0 +1,583 @@
+/* ==========================================================================
+   Archivo: style_rutinas.css
+   Descripción: Estilos para la página Usuario/rutinas. MF
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+ Estilos Generales del Body
+-------------------------------------------------------------------------- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-fondo-contraste);
+  color: var(--color-texto-claro);
+  padding-top: 80px;
+
+}
+
+/*  ----------------- Menu ------------------------------    */
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--color-fondo-mas-oscuro);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+    padding-left: 10px;
+}
+
+.logo img {
+  width: 30px;
+  height: auto;
+}
+
+.menu-title {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.close-app {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  padding-right: 10px;
+}
+
+
+
+
+/* ---Contenedor Principal (Mobile First) --- */
+/* Contenedor principal de rutinas */
+.rutinas-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: var(--color-fondo-mas-oscuro);
+  color: var(--color-texto-claro);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 80px auto 0 auto;
+ 
+}
+
+.rutinas-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--color-primario-naranja);
+}
+
+.rutinas-header h1 {
+  color: var(--color-primario-naranja);
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+/* Estilos del contenedor principal */
+main {
+  width: 100%;
+}
+
+/* Estilos de las Pestañas de Semana */
+.btns-semana-container {
+  /* Botones de Semana */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.btn-semana {
+  /* Botón de Semana */
+  padding: 12px 25px;
+  cursor: pointer;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-texto-secundario);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.btn-semana:hover {
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-primario-naranja-claro);
+  border-color: var(--color-primario-naranja-claro);
+}
+
+.btn-semana.active {
+  background-color: var(--color-primario-naranja);
+  color: var(--color-texto-claro);
+  border-color: var(--color-primario-naranja-oscuro);
+}
+
+.semana-container {
+  /* Contenido de cada Semana */
+  display: none;
+  padding: 20px;
+  border: 1px solid var(--color-borde);
+  border-radius: 5px;
+  background-color: var(--color-fondo-body);
+}
+
+.semana-container.active {
+  display: block;
+}
+
+.semana-container h2 {
+  /* Título de la Semana (Semana 1, Semana 2...) */
+  color: var(--color-primario-naranja-claro);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  /* Aumentado para separar del btns-dias-container */
+  font-size: 1.8rem;
+}
+
+/* Estilos para el Selector de Día */
+.btns-dias-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.btn-dia {
+  padding: 8px 9px;
+  cursor: pointer;
+  border: 1px solid var(--color-borde);
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-texto-secundario);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.btn-dia:hover {
+  background-color: var(--color-fondo-gris-claro);
+  color: var(--color-primario-naranja);
+}
+
+.btn-dia.active {
+  background-color: var(--color-primario-naranja-claro);
+  color: var(--color-texto-claro);
+  border-color: var(--color-primario-naranja);
+}
+
+.ejercicios-por-dia {
+  /* Contenido de cada Día */
+  display: none;
+  /* Oculto por defecto, se muestra con JS */
+}
+
+.ejercicios-por-dia.active {
+  display: block;
+}
+
+/* Estructura de dos columnas para el contenido del día --*/
+.secciones-dia {
+  display: flex;
+  flex-direction: column;
+  /* Apilado en móvil por defecto */
+  gap: 20px;
+}
+
+.secc-izq-dia,
+.secc-derecha-dia {
+  flex: 1;
+  padding: 15px;
+  background-color: var(--color-fondo-mas-oscuro);
+  border-radius: 5px;
+  box-shadow: 0 2px 8px var(--color-sombra-container);
+}
+
+.secc-izq-dia h3 {
+  /* Título de Ejercicios del Día */
+  color: var(--color-primario-naranja);
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+/* Lista de Ejercicios con Checkboxes */
+.lista-ejercicios {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lista-ejercicios li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 10px;
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 4px;
+  border: 1px solid var(--color-borde-input);
+}
+
+.lista-ejercicios input[type="checkbox"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primario-naranja);
+  cursor: pointer;
+}
+
+.lista-ejercicios label {
+  color: var(--color-texto-claro);
+  font-size: 0.95rem;
+  flex-grow: 1;
+}
+
+.lista-ejercicios input[type="checkbox"]:checked+label {
+  text-decoration: line-through;
+  color: var(--color-texto-secundario);
+}
+
+.secc-derecha-dia .text-box {
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 5px;
+  border: 1px solid var(--color-borde-input);
+}
+
+.secc-derecha-dia .text-box h4 {
+  /* Título de Descripción del Día */
+  color: var(--color-primario-naranja-claro);
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.secc-derecha-dia .text-box p {
+  color: var(--color-texto-secundario);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.secc-derecha-dia img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  border: 2px solid var(--color-borde-input);
+}
+
+
+
+
+
+/* Estilos para los items de ejercicio desplegables */
+.lista-ejercicios li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+  padding: 0;
+  background-color: var(--color-fondo-gris-claro);
+  border-radius: 4px;
+  border: 1px solid var(--color-borde-input);
+  overflow: hidden;
+ 
+}
+
+.encab-ejercicio-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.encab-ejercicio-container input[type="checkbox"] {
+  margin-right: 12px;
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primario-naranja);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.encab-ejercicio-container label {
+  color: var(--color-texto-claro);
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.btn-desplegable {
+  background: none;
+  border: none;
+  color: var(--color-primario-naranja-claro);
+  cursor: pointer;
+  padding: 5px;
+  font-size: 1rem;
+  line-height: 1;
+  margin-left: auto;
+  flex-shrink: 0;
+  /* Evitar que el botón se encoja */
+}
+
+.btn-desplegable:hover {
+  color: var(--color-primario-naranja);
+}
+
+.btn-desplegable i {
+  transition: transform 0.3s ease;
+}
+
+/* Igual a los inputs readonly de .contenedor-detalle-ejercicio */
+.detalle-link-video {
+  display: block;
+  width: 100%;
+  padding: 8px 10px;
+  background-color: var(--color-fondo-gris-claro);
+  border: 1px solid var(--color-borde-input);
+  border-radius: 3px;
+  color: var(--color-texto-claro);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.detalle-link-video:hover {
+  background: #e2e6ea;
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+/* Estilos para el panel de detalles del ejercicio */
+.detalle-ejercicio {
+  display: none;
+  padding: 15px;
+  background-color: var(--color-fondo-body);
+  border-top: 1px solid var(--color-borde-input);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.detalle-ejercicio p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  color: var(--color-texto-secundario);
+}
+
+.detalle-ejercicio p strong {
+  color: var(--color-texto-claro);
+}
+
+.contenedor-detalle-ejercicio {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.contenedor-detalle-ejercicio label {
+  font-size: 0.85rem;
+  color: var(--color-primario-naranja-claro);
+  margin-bottom: 4px;
+}
+
+.contenedor-detalle-ejercicio input[type="text"],
+.contenedor-detalle-ejercicio input[type="url"] {
+  width: 100%;
+  padding: 8px 10px;
+  background-color: var(--color-fondo-gris-claro);
+  border: 1px solid var(--color-borde-input);
+  border-radius: 3px;
+  color: var(--color-texto-claro);
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.contenedor-detalle-ejercicio input[type="text"]::placeholder,
+.contenedor-detalle-ejercicio input[type="url"]::placeholder {
+  color: var(--color-texto-secundario);
+  opacity: 0.7;
+}
+
+
+/* Estilos para el contenedor de controles del encabezado de semana */
+.encab-semana {
+ 
+  margin-bottom: 20px;
+  /* Espacio antes del contenido del día */
+}
+
+.encab-semana h2 {
+  margin-bottom: 10px;
+  /* Espacio entre el título y los botones de día en móvil */
+}
+
+
+
+/* ==========================================================================
+   Media Queries para Escritorio (min-width: 769px)
+   Ajustes para layout horizontal y mayor espaciado.
+   ========================================================================== */
+
+
+
+@media (min-width: 769px) {
+
+  /*menu*/
+  .logo {
+    padding-left: 20px;
+  }
+  .logo img {
+    width: 40px;
+    height: auto;
+  }
+
+  .menu-title {
+    font-size: 1.5rem;
+  }
+
+  .close-app {
+    font-size: 1.8rem;
+    padding-right: 20px;
+  }
+
+  /*fin menu*/
+
+  .rutinas-container {
+    padding: 30px;
+  }
+
+  .btns-semana-container {
+    /* Botones de Semana */
+    justify-content: flex-start;
+  }
+
+  .btns-dias-container {
+    /* Botones de Día */
+    justify-content: flex-start;
+  }
+
+  .secciones-dia {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .secc-izq-dia {
+    max-width: 45%;
+    /* Ajuste para dar más espacio a la lista de ejercicios */
+  }
+
+  .secc-derecha-dia {
+    max-width: 55%;
+  }
+
+  .rutinas-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .semana-container h2 {
+    /* Título de Semana */
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .secc-izq-dia h3 {
+    /* Título de Ejercicios del Día */
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .secc-derecha-dia .text-box h4 {
+    /* Título de Descripción del Día */
+    font-size: 1.4rem;
+  }
+
+  .encab-semana {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    /* Mantiene el espacio inferior general */
+  }
+
+  .encab-semana h2 {
+    margin-bottom: 0;
+    margin-right: 20px;
+    text-align: left;
+    
+  }
+
+  .btns-dias-container {
+    margin-bottom: 0;
+    justify-content: flex-end;
+    /* Alinea los botones de día a la derecha */
+  }
+}
+
+/* Escritorios más grandes (a partir de 1024px) */
+@media (min-width: 1024px) {
+
+  .rutinas-container {
+    width: 90%;
+  }
+
+  .secc-izq-dia {
+    max-width: 40%;
+  }
+
+  .secc-derecha-dia {
+    max-width: 60%;
+  }
+}
+
+
+
+@media (min-width: 1368px) {
+  .logo {
+    padding-left: 30px;
+}
+
+.close-app {
+  padding-right: 30px;
+}
+  main {
+    width: 90%;
+    margin: auto
+  }
+
+  .rutinas-container {
+    width: 90%;
+  }
+
+  .secc-izq-dia {
+    max-width: 40%;
+  }
+
+  .secc-derecha-dia {
+    max-width: 60%;
+  }
+}
