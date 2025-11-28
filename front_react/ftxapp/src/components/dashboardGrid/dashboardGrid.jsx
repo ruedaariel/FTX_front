@@ -1,5 +1,5 @@
 import React from 'react';
-import './DashboardGrid.css';
+import './dashboardGrid.css';
 
 const DashboardGrid = ({ children, columns = 3, gap = '2rem', className = '' }) => {
   const gridStyle = {
