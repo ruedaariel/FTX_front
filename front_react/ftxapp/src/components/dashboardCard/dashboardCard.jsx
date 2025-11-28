@@ -1,5 +1,5 @@
 import React from 'react';
-import './DashboardCard.css';
+import './dashboardCard.css';
 
 const DashboardCard = ({ 
   icon, 
