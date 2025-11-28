@@ -6,7 +6,7 @@ import DatosFisicosTab from "../../usuario/usuarioPerfil/components/datosfisicos
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral.js";
 import { useModal } from "../../../context/ModalContext.jsx";
 import { useNavigate } from "react-router-dom";
-import "./registroUsuario.css";
+import "./RegistroUsuario.css";
 
 function RegistroUsuario() {
   const [activeStep, setActiveStep] = useState("plan");
