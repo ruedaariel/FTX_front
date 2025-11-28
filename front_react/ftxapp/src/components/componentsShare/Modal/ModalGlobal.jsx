@@ -1,7 +1,7 @@
 // src/componentsShare/Modal/ModalGlobal.jsx
 import { useModal } from "../../../context/ModalContext";
 import ModalInfoTemporizado from "./ModalInfoTemporizado";
-import './modalError/modalError.css'; // Usá tus estilos existentes
+import '../Modal/modalError/ModalError.css'; // Usá tus estilos existentes
 
 const ModalGlobal = () => {
   const { visible, message, duration,type } = useModal();
