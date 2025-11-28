@@ -1,6 +1,6 @@
 // front_react/ftxapp/src/components/Form/Button.jsx
 import React from 'react';
-import './Button.css';
+import './button.css';
 
 const Button = ({
   children,
