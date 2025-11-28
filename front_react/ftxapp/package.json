@@ -10,7 +10,8 @@
     "lint": "eslint src --ext .js,.jsx",
     "check": "npm run lint && npm run build",
     "preview": "vite preview",
-    "check-imports": "eslint src --ext .js,.jsx --no-eslintrc --config .eslintrc.json"
+    "check-imports": "eslint src"
+
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

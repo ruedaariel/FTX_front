@@ -1,8 +1,9 @@
 import React from 'react';
-import logo from '../../../assets/recursos/IconosLogos/logoSinLetrasNaranja.png';
+import logo from '../../../assets/Recursos/IconosLogos/logoSinLetrasNaranja.png';
 import './HeaderCrud.css';
 import { useNavigate } from 'react-router-dom';
 import { BiLogOutCircle } from "react-icons/bi";
+
 
 function HeaderCrud({ 
   title = "Panel", 
