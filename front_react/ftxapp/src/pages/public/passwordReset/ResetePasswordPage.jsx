@@ -37,7 +37,7 @@ const ResetPasswordPage = () => {
 
     if (data.email) {
       fetchGeneral({
-        url: `http://localhost:8000/apiFtx/auth/reset`,
+        url: `${API_URL}/auth/reset`,
         method: "POST",
         body: datos,
         onSuccess: (data) => {

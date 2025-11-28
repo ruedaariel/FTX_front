@@ -92,7 +92,7 @@ function PerfilUsuario() {
     console.log("cambios despues de normalizar fecha", cambios);
 
     await fetchGeneral({
-      url: `http://localhost:8000/apiFtx/usuario/update/${usuario.id}`,
+      url: `${API_URL}/usuario/update/${usuario.id}`,
       method: "PATCH",
       body: cambios,
       showModal,

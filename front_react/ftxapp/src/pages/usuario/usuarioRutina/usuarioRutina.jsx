@@ -41,7 +41,7 @@ function UsuarioRutina() {
     //  console.log("entre al useeffect");
     async function cargarRutinas() {
       const rutinas = await obtenerRutinasUsuario(
-        "http://localhost:8000/apiFtx/usuario/rutinas/",
+        `${API_URL}/usuario/rutinas/`,
         usuario.id,
         showModal,
         navigate

@@ -28,7 +28,7 @@ const RutinaUsuario = ({
   // Cargar usuarios desde el backend al montar el componente
   useEffect(() => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/usuario/all",
+      url: `${API_URL}/usuario/all`,
       method: "GET",
       onSuccess: (data) => setUsuarios(data),
     });

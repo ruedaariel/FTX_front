@@ -29,7 +29,7 @@ const SeguimientoRutinas = () => {
   useEffect(() => {
       if (!rutinaABuscar) return;
         fetchGeneral({
-        url: `http://localhost:8000/apiFtx/rutina/${rutinaABuscar.idRutina}`,
+        url: `${API_URL}/rutina/${rutinaABuscar.idRutina}`,
         method: "GET",
         onSuccess: (data) => {
           setRutinaUsuario(data);

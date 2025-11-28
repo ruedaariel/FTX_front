@@ -44,7 +44,7 @@ function inicioRutina() {
   useEffect(() => {
     if (rutinaSeleccionada?.idRutina) {
       fetchGeneral({
-        url: `http://localhost:8000/apiFtx/rutina/${rutinaSeleccionada.idRutina}`,
+        url: `${API_URL}/rutina/${rutinaSeleccionada.idRutina}`,
         method: "GET",
         onSuccess: (data) => {
           setRutinaData(data);

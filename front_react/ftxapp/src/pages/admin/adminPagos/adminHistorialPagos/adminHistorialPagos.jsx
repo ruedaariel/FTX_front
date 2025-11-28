@@ -21,7 +21,7 @@ const VistaPagos = () => {
 
   useEffect(() => {
   leerPagosDesdeURL(
-    "http://localhost:8000/apiFtx/pagos",
+    `${API_URL}/pagos`,
     setPagos,
     showModal,
     

@@ -61,7 +61,7 @@ function CardUsuarioEditable({
   useEffect(() => {
     const obtenerPlanes = async () => {
       await fetchGeneral({
-        url: "http://localhost:8000/apiFtx/plan/all",
+        url: `${API_URL}/plan/all`,
         method: "GET",
         onSuccess: (data) => setPlanesDisponibles(data),
         //onSuccess: (data) => setPlanesDisponibles(data),
@@ -69,7 +69,7 @@ function CardUsuarioEditable({
       });
 
       /* try {
-        const response = await fetch("http://localhost:8000/apiFtx/plan/all");
+        const response = await fetch(`${API_URL}/plan/all`);
         if (!response.ok) throw new Error("Error al obtener planes");
         const data = await response.json();
 

@@ -51,7 +51,7 @@ const CrudEjercicioBasico = () => {
 
     const fetchEjercicios = () => {
         fetchGeneral({
-            url: "http://localhost:8000/apiFtx/ejbasico/all",
+            url: `${API_URL}/ejbasico/all`,
             method: "GET",
             setLoading,
             setError,
@@ -102,7 +102,7 @@ const CrudEjercicioBasico = () => {
     }
 
     const ejecutarBorrado = async () => {
-        const url = `http://localhost:8000/apiFtx/ejbasico/delete/${ejercicioSeleccionado.idEjercicioBasico}`;
+        const url = `${API_URL}/ejbasico/delete/${ejercicioSeleccionado.idEjercicioBasico}`;
         try {
             await fetchGeneral({
                 url, method: 'DELETE', setLoading, setError, onSuccess: () => {

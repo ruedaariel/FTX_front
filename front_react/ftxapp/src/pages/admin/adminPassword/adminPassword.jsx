@@ -62,7 +62,7 @@ const AdminPassword = () => {
 
     try {
       await fetchGeneral({
-        url: `http://localhost:8000/apiFtx/usuario/update/${usuario.id}`,
+        url: `${API_URL}/usuario/update/${usuario.id}`,
         method: "PATCH",
         body: cambios,
         showModal,

@@ -147,7 +147,7 @@ const UsuarioDashboard = () => {
   useEffect(() => {
     if (tokenUsuario?.sub) {
       fetchGeneral({
-        url: `http://localhost:8000/apiFtx/usuario/${tokenUsuario.sub}`,
+        url: `${API_URL}/usuario/${tokenUsuario.sub}`,
         method: "GET",
         onSuccess: (data) => setUsuario(data),
 

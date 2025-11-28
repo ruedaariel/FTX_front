@@ -220,7 +220,7 @@ export const useEjercicioForm = (modoEjercicio, ejercicioSeleccionado, setReload
 
         //Preparacion para enviar al backend
         let dataToSend = {};
-        const urlBase = "http://localhost:8000/apiFtx/ejbasico";
+        const urlBase = `${API_URL}/ejbasico`;
         let url = '';
         const method = modoEjercicio === 'Crear' ? "POST" : "PATCH";
 

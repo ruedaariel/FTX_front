@@ -11,7 +11,7 @@ import { extraerMensajeError } from "../../../../components/componentsShare/util
  * @returns {Promise<object|null>} - Datos de respuesta si fue exitoso, o null si falló
  */
 export const guardarRutinaEnBackend = async (idRutina, rutina, modoRutina, showModal) => {
-  const baseUrl = "http://localhost:8000/apiFtx/rutina";
+  const baseUrl = `${API_URL}/rutina`;
   const url =
     modoRutina === "Editar"
       ? `${baseUrl}/update/${idRutina}`

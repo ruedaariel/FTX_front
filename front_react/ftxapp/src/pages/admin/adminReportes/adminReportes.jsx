@@ -30,7 +30,7 @@ const ResumenPagos = ({ dataUsuarios, dataPagos }) => {
 
   useEffect(() => {
     leerPagosDesdeURL(
-      "http://localhost:8000/apiFtx/pagos/impagos",
+      `${API_URL}/pagos/impagos`,
       setUsuarios,
       showModal,
       normalizarPagos
@@ -39,7 +39,7 @@ const ResumenPagos = ({ dataUsuarios, dataPagos }) => {
 
   useEffect(() => {
     leerPagosDesdeURL(
-      "http://localhost:8000/apiFtx/pagos",
+      `${API_URL}/pagos`,
       setPagos,
       showModal
     );

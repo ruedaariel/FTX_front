@@ -29,7 +29,7 @@ const SelectorRutinas = ({ onSeleccionarRutina, modoRutina, setModoRutina }) => 
   // Cargar todas las rutinas disponibles al montar el componente
   useEffect(() => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/rutina/all",
+      url: `${API_URL}/rutina/all`,
       method: "GET",
       setLoading,
       setError,

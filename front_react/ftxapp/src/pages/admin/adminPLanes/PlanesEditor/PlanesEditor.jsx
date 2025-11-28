@@ -39,7 +39,7 @@ const PlanesEditor = ({ planes, actualizarPlanes }) => {
     const planTransformado = transformarPlan(data);
 
   await fetchGeneral({
-    url: `http://localhost:8000/apiFtx/plan/update/${data.idPlan}`,
+    url: `${API_URL}/plan/update/${data.idPlan}`,
     method: "PATCH",
     body: planTransformado,
     onSuccess: () => {

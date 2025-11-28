@@ -59,7 +59,7 @@ const PagoManualForm = ({ onSubmit, onCancel }) => {
   //  Función para obtener usuarios desde el backend
   const obtenerUsuarios = () => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/usuario/all",
+      url: `${API_URL}/usuario/all`,
       method: "GET",
       onSuccess: (data) => setUsuarios(data),
       //mostrarModal, // solo muestra modal si hay error

@@ -16,7 +16,7 @@ const SeguimientoRutinas = ({ onUsuarioChange, onRutinaChange }) => {
   // Cargar lista de usuarios al montar el componente
   useEffect(() => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/usuario/all",
+      url: `${API_URL}/usuario/all`,
       method: "GET",
       onSuccess: (data) => setUsuarios(data),
     });
@@ -27,7 +27,7 @@ const SeguimientoRutinas = ({ onUsuarioChange, onRutinaChange }) => {
     if (!usuarioSeleccionado) return;
 
     fetchGeneral({
-      url: `http://localhost:8000/apiFtx/usuario/rutinas/${usuarioSeleccionado.id}`,
+      url: `${API_URL}/usuario/rutinas/${usuarioSeleccionado.id}`,
       method: "GET",
       onSuccess: (data) => setRutinasUsuario(data),
       showModal,
@@ -39,7 +39,7 @@ const SeguimientoRutinas = ({ onUsuarioChange, onRutinaChange }) => {
     if (!rutinaSeleccionada) return;
 
     fetchGeneral({
-      url: `http://localhost:8000/apiFtx/rutina/seguimiento/${rutinaSeleccionada.idRutina}`,
+      url: `${API_URL}/rutina/seguimiento/${rutinaSeleccionada.idRutina}`,
       method: "GET",
       onSuccess: (data) => setDatosRutinaSeleccionada(data),
       showModal,

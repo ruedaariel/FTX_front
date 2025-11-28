@@ -26,7 +26,7 @@ function RegistroUsuario() {
 
   useEffect(() => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/plan/all",
+      url: `${API_URL}/plan/all`,
       method: "GET",
       onSuccess: (data) => setPlanesDisponibles(data),
       showModal,
@@ -102,7 +102,7 @@ function RegistroUsuario() {
     console.log("payload", payload);
 
     await fetchGeneral({
-      url: "http://localhost:8000/apiFtx/usuario/register",
+      url: `${API_URL}/usuario/register`,
       method: "POST",
       body: payload,
       showModal,

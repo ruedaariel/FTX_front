@@ -24,7 +24,7 @@ const EjercicioRutina = ({
   // Cargar lista de ejercicios disponibles desde el backend
   useEffect(() => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/ejbasico/all",
+      url: `${API_URL}/ejbasico/all`,
       method: "GET",
       onSuccess: (data) => setEjerciciosDisponibles(data),
       showModal

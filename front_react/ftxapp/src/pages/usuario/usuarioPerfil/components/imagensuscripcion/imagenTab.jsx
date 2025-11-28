@@ -32,7 +32,7 @@ const ImagenTab = () => {
   // Cargar los planes disponibles desde el backend al montar el componente
   useEffect(() => {
     fetchGeneral({
-      url: `http://localhost:8000/apiFtx/plan/all`,
+      url: `${API_URL}/plan/all`,
       method: "GET",
       onSuccess: (data) => {
         setPlanesDisponibles(data);
@@ -67,7 +67,7 @@ const ImagenTab = () => {
 
     const idUsuario = watch("datosBasicos.idUsuario");
 
-    const url = `http://localhost:8000/apiFtx/usuario/${idUsuario}/imagen-perfil`;
+    const url = `${API_URL}/usuario/${idUsuario}/imagen-perfil`;
     const method = "PATCH";
 
     const formData = new FormData();

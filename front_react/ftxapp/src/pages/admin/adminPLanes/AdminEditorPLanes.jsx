@@ -13,7 +13,7 @@ const VistaPlanes = () => {
   useEffect(() => {
       const fetchPlanes = async () => {
         await fetchGeneral({
-          url: `http://localhost:8000/apiFtx/plan/all`,
+          url: `${API_URL}/plan/all`,
           method: "GET",
           onSuccess: (data) => {
             setPlanes(data);

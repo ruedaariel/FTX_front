@@ -122,7 +122,7 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
   //  Función para obtener usuarios desde el backend
   const obtenerUsuarios = () => {
     fetchGeneral({
-      url: "http://localhost:8000/apiFtx/usuario/all",
+      url: `${API_URL}/usuario/all`,
       method: "GET",
       setLoading,
       setError,
@@ -141,7 +141,7 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
   //  Función para guardar cambios del usuario editado
   const handleGuardarCambios = (datosActualizados) => {
     fetchGeneral({
-      url: `http://localhost:8000/apiFtx/usuario/update-basico/${usuarioEditando.id}`,
+      url: `${API_URL}/usuario/update-basico/${usuarioEditando.id}`,
       method: "PATCH",
       body: datosActualizados,
       setLoading,
@@ -209,7 +209,7 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
   //  Función que elimina el usuario y muestra feedback
   const eliminarUsuario = (id, nombre, apellido) => {
     fetchGeneral({
-      url: `http://localhost:8000/apiFtx/usuario/delete/${id}`,
+      url: `${API_URL}/usuario/delete/${id}`,
       method: "DELETE",
       onSuccess: () => {
         obtenerUsuarios();

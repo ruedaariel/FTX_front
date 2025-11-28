@@ -19,7 +19,7 @@ export async function obtenerRutinasUsuario(endpoint,idUsuario, showModal, navig
   await fetchGeneral({
 
     url: urlEstadistica,
-    // url: `http://localhost:8000/apiFtx/usuario/rutinas/${idUsuario}`,
+    // url: `${API_URL}/usuario/rutinas/${idUsuario}`,
     method: "GET",
     onSuccess: (data) => {
       if (Array.isArray(data) && data.length === 0) {
@@ -50,7 +50,7 @@ export async function cambiarEstadoRutina(idRutina, estadoRutina, showModal) {
   
 
   await fetchGeneral({
-    url: `http://localhost:8000/apiFtx/rutina/updateEstado/${idRutina}`,
+    url: `${API_URL}/rutina/updateEstado/${idRutina}`,
     method: "PUT",
     body: { estadoRutina: estadoRutina }, 
     
@@ -76,7 +76,7 @@ export async function obtenerRutina(idRutina, showModal) {
   let rutina = null;
 
   await fetchGeneral({
-    url: `http://localhost:8000/apiFtx/rutina/${idRutina}`,
+    url: `${API_URL}/rutina/${idRutina}`,
     method: "GET",
     onSuccess: (data) => {
       rutina = data; // guardamos la respuesta

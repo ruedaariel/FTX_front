@@ -53,9 +53,9 @@ const LoginFormSection = ({ logo }) => {
         try {
 
             await fetchGeneral({
-                // url: "http://localhost:8000/apiFtx/auth/login",
+                // url: `${API_URL}/auth/login`,
                 url: `${API_URL}/auth/login`,
-                // url: "http://localhost:8000/apiFtx/auth/login",
+                // url: ○6${API_URL}/auth/login`,
                 method: "POST",
                 body: dataToSend,
                 setLoading,

@@ -28,7 +28,7 @@ const RutinaInteractiva = ({ rutina: rutinaInicial }) => {
     const ejercicio = {ejercicioHecho:true};
 
     await fetchGeneral({
-      url: `http://localhost:8000/apiFtx/ejrutina/update/${idEjercicio}`,
+      url: `${API_URL}/ejrutina/update/${idEjercicio}`,
       method: "PATCH",
       body: ejercicio ,
       // showModal,

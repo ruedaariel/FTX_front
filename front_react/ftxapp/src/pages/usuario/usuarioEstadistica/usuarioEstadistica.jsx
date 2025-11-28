@@ -39,7 +39,7 @@ function UsuarioRutina() {
   useEffect(() => {
     //  console.log("entre al useeffect");
 
-    let urlesta = `http://localhost:8000/apiFtx/usuario/rutinasEstadistica/`;
+    let urlesta = `${API_URL}/usuario/rutinasEstadistica/`;
     
     async function cargarRutinas() {
       const rutinas = await obtenerRutinasUsuario(

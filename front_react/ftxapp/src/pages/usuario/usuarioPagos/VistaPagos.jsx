@@ -16,7 +16,7 @@ const VistaPagos = () => {
 
   useEffect(() => {
     fetchGeneral({
-      url: `http://localhost:8000/apiFtx/pagos/${usuario.id}`, // ajustá según tu endpoint real
+      url: `${API_URL}/pagos/${usuario.id}`, // ajustá según tu endpoint real
       method: "GET",
       onSuccess: (data) => {
         setPagos(data);

@@ -128,7 +128,7 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
   const obtenerUsuarios = async () => {
     setLoading(true);
     try {
-      const response = await fetch("http://localhost:8000/apiFtx/usuario/all");
+      const response = await fetch(`${API_URL}/usuario/all`);
       if (!response.ok) {
         throw new Error("Error al obtener los datos");
       }
@@ -153,7 +153,7 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
   const handleGuardarCambios = async (datosActualizados) => {
     try {
       const response = await fetch(
-        `http://localhost:8000/apiFtx/usuario/update-basico/${usuarioEditando.id}`,
+        `${API_URL}/usuario/update-basico/${usuarioEditando.id}`,
         {
           method: "PATCH",
           headers: {
@@ -205,7 +205,7 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
     try {
       // Petición DELETE al backend para eliminar el usuario
       const response = await fetch(
-        `http://localhost:8000/apiFtx/usuario/delete/${usuarioAEliminar.id}`,
+        `${API_URL}/usuario/delete/${usuarioAEliminar.id}`,
         {
           method: "DELETE",
         }
