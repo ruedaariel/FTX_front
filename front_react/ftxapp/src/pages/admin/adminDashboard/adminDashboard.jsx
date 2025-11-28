@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 
-import './AdminDashboard.css';
+import './adminDashboard.css';
 import DashboardGrid from '../../../components/dashboardGrid/dashboardGrid';
 import DashboardCard from '../../../components/dashboardCard/dashboardCard';
 
