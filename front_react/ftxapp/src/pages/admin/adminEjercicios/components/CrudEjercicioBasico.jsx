@@ -12,6 +12,7 @@ import { useEjercicioForm } from "./useEjercicioForm";
 import { getEmbedUrl } from "./utils/formatoVideo";
 import { useModal } from "../../../../context/ModalContext";
 import ModalDecision from "../../../../components/componentsShare/Modal/ModalDecision";
+import API_URL from "../../../../config/api";
 
 
 const CrudEjercicioBasico = () => {

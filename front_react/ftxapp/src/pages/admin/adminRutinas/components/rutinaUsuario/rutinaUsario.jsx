@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./rutinaUsuario.css";
 import { fetchGeneral } from "../../../../../components/componentsShare/utils/fetchGeneral";
+import API_URL from "../../../../../config/api";
 
 /**
  * Componente que permite editar el nombre y usuario asociado a una rutina.

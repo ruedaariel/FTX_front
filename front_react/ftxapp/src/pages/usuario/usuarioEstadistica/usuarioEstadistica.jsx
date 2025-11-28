@@ -7,6 +7,7 @@ import { useLocation } from "react-router-dom";
 
 // Contexto de modal
 import { useModal } from "../../../context/ModalContext.jsx";
+import API_URL from "../../../config/api.js";
 
 // Utilidades
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral.js";

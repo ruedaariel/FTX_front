@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./SeleccionUsuariosyRutinas.css";
 import { fetchGeneral } from "../../../../components/componentsShare/utils/fetchGeneral";
 import { useModal } from "../../../../context/ModalContext";
+import API_URL from "../../../../config/api";
 
 // Componente que permite seleccionar un usuario y una rutina asociada,
 // y muestra los datos estadísticos de la rutina seleccionada

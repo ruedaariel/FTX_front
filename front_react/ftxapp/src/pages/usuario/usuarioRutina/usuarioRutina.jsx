@@ -19,6 +19,7 @@ import {
   obtenerRutina,
   cambiarEstadoRutina
 } from "../components/utils/fetchRutinasUsuario.js";
+import API_URL from "../../../config/api.js";
 
 function UsuarioRutina() {
   const location = useLocation();

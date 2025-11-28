@@ -4,6 +4,7 @@ import "./PlanesEditor.css";
 import { useModal } from "../../../../context/ModalContext";
 import { PlanService } from "../../../../services/planService";
 import { fetchGeneral } from "../../../../components/componentsShare/utils/fetchGeneral";
+import API_URL from "../../../../config/api";
 
 const PlanesEditor = ({ planes, actualizarPlanes }) => {
   const [idEditando, setIdEditando] = useState(null);

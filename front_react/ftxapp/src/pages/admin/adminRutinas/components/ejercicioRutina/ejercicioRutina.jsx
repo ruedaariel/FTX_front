@@ -3,6 +3,7 @@ import "./ejercicioRutina.css";
 import { fetchGeneral } from "../../../../../components/componentsShare/utils/fetchGeneral";
 import { FaPlus, FaTrash } from "react-icons/fa";
 import { useModal } from "../../../../../context/ModalContext";
+import API_URL from "../../../../../config/api";
 
 /**
  * Componente que representa un ejercicio dentro de un día de rutina.

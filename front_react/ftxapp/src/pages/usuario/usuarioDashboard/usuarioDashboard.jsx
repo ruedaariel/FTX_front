@@ -12,6 +12,7 @@ import { getToken } from "../../../auth/token";
 import { decodeToken } from "../../../auth/jwt";
 import { storageService } from "../../public/loginPage/components/utils/storageService";
 import { FaMoneyBill1Wave } from "react-icons/fa6";
+import API_URL from "../../../config/api";
 
 const UsuarioDashboard = () => {
   const navigate = useNavigate();

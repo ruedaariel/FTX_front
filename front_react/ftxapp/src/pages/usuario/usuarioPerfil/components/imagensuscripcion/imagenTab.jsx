@@ -4,6 +4,7 @@ import "./datosImagenSuscripcion.css";
 import { fetchGeneral } from "../../../../../components/componentsShare/utils/fetchGeneral";
 import { useModal } from "../../../../../context/ModalContext";
 import { extraerMensajeError } from "../../../../../components/componentsShare/utils/extraerMensajeError";
+import API_URL from "../../../../../config/api";
 
 const ImagenTab = () => {
   const { register, setValue, watch, formState: { errors } } = useFormContext();

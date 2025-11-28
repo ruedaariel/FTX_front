@@ -7,6 +7,7 @@ import "./colores.css";
 
 import ContenedorCards from "./ContenedorCards";
 import ModalInfoTemporizado from "../Modal/ModalInfoTemporizado";
+import API_URL from "../../../config/api";
 
 
 // Componente principal que muestra la lista de usuarios

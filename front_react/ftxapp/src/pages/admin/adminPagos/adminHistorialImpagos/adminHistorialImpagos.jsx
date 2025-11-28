@@ -9,6 +9,7 @@ import SelectNombres from "../components/SelectorNombres/SelectorNombres";
 import { leerPagosDesdeURL } from "../components/utils/leerPagosDesdeURL";
 import "../adminHistorialPagos/adminHistorialPagos.css";
 import { normalizarPagos } from "../components/utils/normalizarPagos";
+import API_URL from "../../../../config/api";
 
 const VistaPagos = () => {
   const [pagos, setPagos] = useState([]);

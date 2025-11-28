@@ -7,6 +7,7 @@ import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGen
 import { useModal } from "../../../context/ModalContext.jsx";
 import { useNavigate } from "react-router-dom";
 import "./RegistroUsuario.css";
+import API_URL from "../../../config/api.js";
 
 function RegistroUsuario() {
   const [activeStep, setActiveStep] = useState("plan");

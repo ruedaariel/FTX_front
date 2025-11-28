@@ -22,6 +22,7 @@ import { armarRutinaParaGuardar } from "./utils/armarRutinaParaGuardar.js";
 import { sanearRutinaCompleta } from "./utils/sanearRutinaCompleta.js";
 import { crearRutinaNueva } from "./utils/plantillasRutina.js";
 import ModalResumenRutina from "./components/ResumenSemanaRutina/ModalResumenRutina.jsx";
+import API_URL from "../../../config/api.js";
 
 function inicioRutina() {
   // Estados principales

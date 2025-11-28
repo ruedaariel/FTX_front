@@ -20,6 +20,7 @@ import SeguridadTab from "./components/seguridad/seguridadTab.jsx";
 // Utilidades
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral.js";
 import { useModal } from "../../../context/ModalContext.jsx";
+import API_URL from "../../../config/api.js";
 
 // Helpers para transformación y comparación de datos
 import {

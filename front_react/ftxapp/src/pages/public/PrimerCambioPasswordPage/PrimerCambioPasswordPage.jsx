@@ -8,6 +8,7 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import SeguridadTab from "../../usuario/usuarioPerfil/components/seguridad/seguridadTab";
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral";
+import API_URL from "../../../config/api";
 
 const PrimerCambioPasswordPage = () => {
   const methods = useForm({ mode: "onBlur" }); // podés usar "onChange" si querés validar mientras escribe

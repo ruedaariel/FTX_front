@@ -4,6 +4,7 @@ import { FaInfoCircle } from "react-icons/fa";
 import { fetchGeneral } from "../../../../../components/componentsShare/utils/fetchGeneral.js";
 import { useModal } from "../../../../../context/ModalContext.jsx";
 import { data } from "react-router";
+import API_URL from "../../../../../config/api.js";
 
 // Componente principal que permite editar los datos de un usuario
 function CardUsuarioEditable({

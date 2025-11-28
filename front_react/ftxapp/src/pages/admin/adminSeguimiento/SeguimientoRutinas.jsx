@@ -5,6 +5,7 @@ import SeleccionUsuarioyRutinas from "../adminSeguimiento/seleccionUsuarioyRutin
 import AvanceRutina from "../../usuario/usuarioEstadistica/avanceRutina.jsx";
 import { useModal } from "../../../context/ModalContext.jsx";
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral.js";
+import API_URL from "../../../config/api.js";
 
 const SeguimientoRutinas = () => {
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(null);

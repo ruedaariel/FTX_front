@@ -6,6 +6,7 @@ import logoNaranja from "../../../assets/Recursos/IconosLogos/logoSinLetrasNaran
 import ftxImage13 from "../../../assets/Recursos/Imagenes/FTX_13.jpg";
 import { useModal } from "../../../context/ModalContext";
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral";
+import API_URL from "../../../config/api";
 
 import { useForm } from "react-hook-form";
 

@@ -3,7 +3,7 @@ import DiaItem from "./DiaItem";
 import "./RutinaInteractiva.css";
 import {useModal} from "../../../../context/ModalContext";
 import { fetchGeneral } from '../../../../components/componentsShare/utils/fetchGeneral';
-
+import API_URL from "../../../../config/api";
 
 const RutinaInteractiva = ({ rutina: rutinaInicial }) => {
   const [rutina, setRutina] = useState(() => rutinaInicial || { semanas: [] });

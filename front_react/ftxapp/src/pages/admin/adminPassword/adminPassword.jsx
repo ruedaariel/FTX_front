@@ -6,6 +6,7 @@ import { useModal } from "../../../context/ModalContext";
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral";
 import { useLocation, useNavigate } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import API_URL from "../../../config/api";
 
 const AdminPassword = () => {
   const { showModal } = useModal();

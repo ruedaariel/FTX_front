@@ -8,6 +8,7 @@ import ListasPagosHistorial from "../components/listadosHistorialPagos/listadosH
 import SelectNombres from "../components/SelectorNombres/SelectorNombres";
 import { leerPagosDesdeURL } from "../components/utils/leerPagosDesdeURL";
 import "./adminHistorialPagos.css";
+import API_URL from "../../../../config/api";
 
 const VistaPagos = () => {
   const [pagos, setPagos] = useState([]);

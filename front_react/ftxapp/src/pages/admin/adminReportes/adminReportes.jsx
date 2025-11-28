@@ -7,6 +7,7 @@ import HeaderCrud from "../../../components/componentsShare/header/HeaderCrud";
 import { IoPeople } from "react-icons/io5";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import GraficoPagosMensuales from "./components/GraficoPagosMensuales/GraficoPagosMensuales";
+import API_URL from "../../../config/api";
 
 import "./adminReportes.css";
 

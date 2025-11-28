@@ -1,5 +1,5 @@
 import { fetchGeneral } from "../../../../components/componentsShare/utils/fetchGeneral.js";
-
+import API_URL from "../../../../config/api.js";
 /**
  * Obtiene rutinas de un usuario desde backend.
  *

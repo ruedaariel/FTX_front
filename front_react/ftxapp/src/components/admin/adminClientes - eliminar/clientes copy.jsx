@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 // Estilos específicos del componente y colores globales
 import "./listaUsuarios.css";
 import "./colores.css";
+import API_URL from "../../../config/api";
+
 
 import ContenedorCards from './ContenedorCards';
 

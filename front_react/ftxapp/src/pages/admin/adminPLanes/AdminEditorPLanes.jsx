@@ -4,6 +4,7 @@ import { PlanService } from "../../../services/planService";
 import HeaderCrud from "../../../components/componentsShare/header/HeaderCrud";
 import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGeneral";  
 import { useModal } from "../../../context/ModalContext";
+import API_URL from "../../../config/api";
 
 
 const VistaPlanes = () => {

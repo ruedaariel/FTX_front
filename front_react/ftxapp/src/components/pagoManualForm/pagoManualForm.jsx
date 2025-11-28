@@ -4,7 +4,7 @@ import FormField from "../form/formField";
 import Button from "../form/button/button";
 import { fetchGeneral } from "../componentsShare/utils/fetchGeneral";
 import { useModal } from "../../context/ModalContext";
-
+import API_URL from "../../config/api";
 import "./pagoManualForm.css";
 import PagosService from "../../services/pagoManualService";
 

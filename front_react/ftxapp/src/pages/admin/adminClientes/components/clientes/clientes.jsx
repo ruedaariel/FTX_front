@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { fetchGeneral } from "../../../../../components/componentsShare/utils/fetchGeneral";
 // Contexto de modal
 import { useModal } from "../../../../../context/ModalContext";
+import API_URL from "../../../../../config/api";
 
 //  Estilos específicos del componente y colores globales
 import "./listaUsuarios.css";

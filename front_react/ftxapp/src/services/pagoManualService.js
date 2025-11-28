@@ -1,6 +1,7 @@
 // front_react/ftxapp/src/services/pagosService.js
 import axios from 'axios';
 import { getToken } from "../auth/token";
+import API_URL from "../config/api";
 
 // Configurar instancia de axios
 const api = axios.create({

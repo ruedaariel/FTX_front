@@ -4,6 +4,7 @@ import { fetchGeneral } from "../../../components/componentsShare/utils/fetchGen
 import { useModal } from "../../../context/ModalContext";
 import HeaderCrud from "../../../components/componentsShare/header/HeaderCrud";
 import { useLocation } from "react-router-dom";
+import API_URL from "../../../config/api";
 
 
 const VistaPagos = () => {

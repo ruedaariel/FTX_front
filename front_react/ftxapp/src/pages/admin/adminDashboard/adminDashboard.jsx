@@ -13,6 +13,7 @@ import HeaderCrud from '../../../components/componentsShare/header/HeaderCrud';
 import { fetchGeneral } from '../../../components/componentsShare/utils/fetchGeneral';
 import { FcStatistics } from "react-icons/fc";
 import { TbPasswordUser } from "react-icons/tb";
+import API_URL from "../../../config/api";
 
 
 const AdminDashboard = () => {

@@ -5,6 +5,7 @@ import { EJERCICIO_VACIO } from './utils/ejercicio_vacio';
 import { VALIDACION_REGLAS } from './utils/validacionReglas';
 import { fetchGeneral } from "../../../../components/componentsShare/utils/fetchGeneral";
 import { useModal } from "../../../../context/ModalContext";
+import API_URL from "../../../../config/api";
 
 export const useEjercicioForm = (modoEjercicio, ejercicioSeleccionado, setReload, setEjecicioSeleccionado, fileInputRef) => {
     //ejercicio del form (vacio o lleno )

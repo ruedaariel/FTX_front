@@ -1,6 +1,6 @@
 import { fetchGeneral } from "../../../../components/componentsShare/utils/fetchGeneral";
 import { extraerMensajeError } from "../../../../components/componentsShare/utils/extraerMensajeError";
-
+import API_URL from "../../../../config/api";
 /**
  * Guarda una rutina en el backend, ya sea en modo "Crear" o "Editar".
  *

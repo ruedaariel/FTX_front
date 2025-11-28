@@ -6,6 +6,7 @@ import { fetchGeneral } from "../../../../../components/componentsShare/utils/fe
 import GrupoRadios from "../../../../../components/componentsShare/grupoRadios/grupoRadios.jsx";
 import SelectorGenerico from "../../../../../components/componentsShare/selectorGenerico/selectorGenerico.jsx";
 import { useModal } from "../../../../../context/ModalContext.jsx";
+import API_URL from "../../../../../config/api.js";
 
 
 /**
