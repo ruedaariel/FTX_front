@@ -1,5 +1,5 @@
 import React from "react";
-import "./GrupoRadios.css";
+import "./grupoRadios.css";
 
 const GrupoRadios = ({ opciones = [], valorSeleccionado, onChange, nombreGrupo = "grupo" }) => {
   return (
