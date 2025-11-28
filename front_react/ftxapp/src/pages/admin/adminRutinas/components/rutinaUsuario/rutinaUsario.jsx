@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./RutinaUsuario.css";
+import "./rutinaUsuario.css";
 import { fetchGeneral } from "../../../../../components/componentsShare/utils/fetchGeneral";
 
 /**
