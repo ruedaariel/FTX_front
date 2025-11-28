@@ -1,6 +1,6 @@
 // front_react/ftxapp/src/components/Modal/Modal.jsx
 import React from 'react';
-import './Modal.css';
+import './modal.css';
 
 const Modal = ({ 
   isOpen, 
