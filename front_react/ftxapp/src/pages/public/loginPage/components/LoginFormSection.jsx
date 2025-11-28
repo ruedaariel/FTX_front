@@ -11,6 +11,7 @@ import { fetchGeneral } from "../../../../components/componentsShare/utils/fetch
 import { useEffect } from 'react';
 import { saveToken } from '../../../../auth/token';
 import { storageService } from '../components/utils/storageService';
+import API_URL from '../../../../config/api';
 
 
 const LoginFormSection = ({ logo }) => {
@@ -52,7 +53,9 @@ const LoginFormSection = ({ logo }) => {
         try {
 
             await fetchGeneral({
-                url: "http://localhost:8000/apiFtx/auth/login",
+                // url: "http://localhost:8000/apiFtx/auth/login",
+                url: `${API_URL}/auth/login`,
+                // url: "http://localhost:8000/apiFtx/auth/login",
                 method: "POST",
                 body: dataToSend,
                 setLoading,
