@@ -1,6 +1,6 @@
 // front_react/ftxapp/src/components/Form/FormField.jsx
 import React from 'react';
-import './FormField.css';
+import './formField.css';
 
 const FormField = ({
   label,
