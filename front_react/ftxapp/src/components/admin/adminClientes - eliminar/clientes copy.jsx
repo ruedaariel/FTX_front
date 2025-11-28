@@ -41,6 +41,8 @@ const TablaUsuarios = ({ estadoFiltro, filtrosAvanzados }) => {
 
   const [activeTab, setActiveTab] = useState({});
 
+  
+
   // Efecto que se ejecuta al montar el componente para obtener los usuarios
   useEffect(() => {
     obtenerUsuarios();
