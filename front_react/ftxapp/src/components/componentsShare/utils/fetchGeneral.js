@@ -68,6 +68,7 @@ export const fetchGeneral = async ({
   //   body: isFormData ? body : (body ? JSON.stringify(body) : null),
   // };
 
+
   // Solo agregar headers si no es FormData
   if (!isFormData) {
     fetchOptions.headers = headers;
@@ -81,6 +82,9 @@ export const fetchGeneral = async ({
     const response = await fetch(url, fetchOptions);
     let data;
 
+    
+    
+    console.log("url-----:", url);
     // Intentar parsear la respuesta como JSON
     try {
       data = await response.json();
