@@ -7,7 +7,7 @@ export default defineConfig({
    preview: {
     port: process.env.PORT || 4173,
     host: true,
-    allowedHosts: ['ftxfront-production.up.railway.app']
+    allowedHosts: ['ftx.up.railway.app']
     // allowedHosts: ['*']
   }
 })
