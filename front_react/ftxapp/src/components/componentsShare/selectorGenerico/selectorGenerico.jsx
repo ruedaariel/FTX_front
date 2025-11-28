@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./SelectorGenerico.css";
+import "./selectorGenerico.css";
 
 /**
  * Componente reutilizable para renderizar un <select> dinámico.
