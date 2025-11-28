@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./modalError/modalError.css"; // Usá tus estilos existentes
+import '../Modal/modalError/ModalError.css'; // Usá tus estilos existentes
 
 const ModalInfoTemporizado = ({
   isOpen,
