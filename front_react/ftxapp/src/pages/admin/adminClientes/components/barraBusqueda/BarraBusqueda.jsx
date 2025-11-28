@@ -1,5 +1,5 @@
 import React from "react";
-import "./BarraBusqueda.css";
+import "./barraBusqueda.css";
 //import "../../../../colores.css";
 import GrupoRadios from "../../../../../components/componentsShare/grupoRadios/grupoRadios"; // ajustá la ruta según tu estructura
 
