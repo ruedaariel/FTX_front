@@ -1,13 +1,19 @@
 {
+  "root": true,
   "plugins": ["import"],
   "rules": {
-    "import/no-unresolved": "error"
+    "import/no-unresolved": "error",
+    "no-unused-vars": "off"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx", ".css"]
+        "extensions": [".js", ".jsx", ".css"]
       }
     }
   }
 }
+
+
+
+
