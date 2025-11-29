@@ -7,12 +7,15 @@ import { ordenarPlanesPorPrecio } from "../../../utils/planUtils";
 import HeaderCrud from "../../../components/componentsShare/header/HeaderCrud";
 import "./planes.css";
 import { useModal } from "../../../context/ModalContext";
+import { useNavigate } from "react-router-dom";
 
 const Planes = () => {
   const [planes, setPlanes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const { showModal } = useModal();
+  const navigate = useNavigate();
+
 
   useEffect(() => {
     cargarPlanes();
@@ -38,8 +41,8 @@ const Planes = () => {
   const handleSelectPlan = (plan) => {
     console.log("Plan seleccionado:", plan);
     // Aquí puedes agregar lógica para navegar a otra página o abrir un modal
-    // Por ejemplo: navigate('/checkout', { state: { plan } });
-    showModal(`Has seleccionado el plan: ${plan.nombrePlan}`, "success", 2000);
+    navigate('/usuario/perfil', { state: { plan } });
+    showModal(`Selecciona el plan: ${plan.nombrePlan} en tu perfil.`, "success", 2000);
     // alert(`Has seleccionado el plan: ${plan.nombrePlan}`);
   };
 
