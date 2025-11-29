@@ -41,8 +41,9 @@ const Planes = () => {
   const handleSelectPlan = (plan) => {
     console.log("Plan seleccionado:", plan);
     // Aquí puedes agregar lógica para navegar a otra página o abrir un modal
-    navigate('/usuario/perfil', { state: { plan } });
-    showModal(`Selecciona el plan: ${plan.nombrePlan} en tu perfil.`, "success", 2000);
+    navigate('-1');
+    // showModal(`Selecciona el plan: ${plan.nombrePlan} en tu perfil.`, "success", 2000);
+
     // alert(`Has seleccionado el plan: ${plan.nombrePlan}`);
   };
 

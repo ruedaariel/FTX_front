@@ -21,11 +21,11 @@ const PlanCard = ({
 
   const getButtonText = () => {
     if (isPopular) {
-      return "Obtener Mi Rutina";
+      return "Obtener tu Rutina en tu perfil";
     }
     return plan.nombrePlan?.toLowerCase().includes("premium")
       ? "Comenzar Transformación"
-      : "Seleccionar Plan";
+      : "Selecciona el Plan en tu perfil";
   };
 
   const getButtonVariant = () => {
