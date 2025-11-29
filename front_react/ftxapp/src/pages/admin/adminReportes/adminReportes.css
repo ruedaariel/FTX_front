@@ -56,21 +56,21 @@
 
 .usuarios-activos{
 
-  color: #5bd962;
-   box-shadow: 2px 2px  6px var(--color-texto-claro);
+  color: var(--color-texto-claro);
+   /* box-shadow: 2px 2px  6px var(--color-texto-claro); */
   padding: 0 .5rem 0 .5rem;
   
 }
 .usuarios-inactivos{
 
-  color: #f2fa53;
-  box-shadow: 2px 2px  6px var(--color-texto-claro);
+  color: var(--color-texto-claro);
+  /* box-shadow: 2px 2px  6px var(--color-texto-claro); */
   padding: 0 .5rem 0 .5rem;
 }
 .usuarios-impagos{
   margin-top: .2rem;
-  color: rgb(191, 40, 40);
-  box-shadow: 2px 2px  6px var(--color-texto-claro);
+  color: var(--color-texto-claro);
+  /* box-shadow: 2px 2px  6px var(--color-texto-claro); */
   padding: 0 .5rem 0 .5rem;
 }
 
@@ -98,7 +98,7 @@ color: var(--color-texto-claro);
 
 .nota-total {
     font-size: 0.8em;
-    color: var(--color-primario-naranja);
+    color: var(--color-texto-claro);
     margin-top: 15px;
 }
 @media screen and (max-width: 768px) {
