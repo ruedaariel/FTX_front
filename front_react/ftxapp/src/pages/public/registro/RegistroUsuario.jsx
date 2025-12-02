@@ -179,7 +179,7 @@ function RegistroUsuario() {
                   </select>
                 </div>
                 <div className="boton-ver-detalles">
-                  <button type="button" onClick={() => navigate("/admin/planes")}>
+                  <button type="button" onClick={() => navigate("/public/planes")}>
                     Ver detalles de planes
                   </button>
                 </div>

@@ -90,7 +90,7 @@ const DatosFisicosTab = () => {
               maxLength: { value: 300, message: "Máximo 300 caracteres" },
               validate: (value) => {
                 if (value === "") return true;
-                if (value.length < 10)
+                if (value.length < 3)
                   return "Debe tener al menos 3 caracteres";
                 if (!/^[a-zA-Z0-9\sáéíóúÁÉÍÓÚñÑ.,()\-]+$/.test(value)) {
                   return "Solo se permiten letras, números y signos básicos";

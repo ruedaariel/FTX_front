@@ -89,25 +89,26 @@ const UsuarioDashboard = () => {
       return;
     }
 
-    if (validarUsuario?.message?.includes("nuevo")) {
-      showModal(
-        "Cuando se acredite tu pago se habilitaran las opciones de tu plan.",
-        "info",
-        0,
-        true
-      );
+    // if (validarUsuario?.message?.includes("nuevo")) {
+    //   showModal(
+    //     "Cuando se acredite tu pago se habilitaran las opciones de tu plan.",
+    //     "info",
+    //     0,
+    //     true
+    //   );
 
-      console.log("usuario en dashboard", validarUsuario);
+    //   console.log("usuario en dashboard", validarUsuario);
             
-      return;
-    }
+    //   return;
+    // }
   }, [validarUsuario]);
 
   // Función para habilitar/deshabilitar funcionalidades
   const habilitarFunciones = () => {
     if (
-      validarUsuario?.message?.includes("impago") ||
-      validarUsuario?.message?.includes("nuevo")
+      validarUsuario?.message?.includes("impago")
+      // validarUsuario?.message?.includes("impago") ||
+      // validarUsuario?.message?.includes("nuevo")
     ) {return  false; } 
     else {return true;}// impago o nuevo (sin pago) deshabilita funciones
   };
