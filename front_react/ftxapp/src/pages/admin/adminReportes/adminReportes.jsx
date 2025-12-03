@@ -1,4 +1,3 @@
-
 // ResumenPagos.js
 import React, { useEffect, useState } from "react";
 import { leerPagosDesdeURL } from "../../admin/adminPagos/components/utils/leerPagosDesdeURL";
@@ -8,20 +7,16 @@ import HeaderCrud from "../../../components/componentsShare/header/HeaderCrud";
 import { IoPeople } from "react-icons/io5";
 import { FaMoneyBillTrendUp } from "react-icons/fa6";
 import GraficoPagosMensuales from "./components/GraficoPagosMensuales/GraficoPagosMensuales";
+import API_URL from "../../../config/api";
 
 import "./adminReportes.css";
 
-/* -----------------------------
-   Helpers para fecha
------------------------------ */
-
-// Devuelve el año actual en formato de 2 dígitos (ej: "25")
+// Helpers para fecha
 const obtenerAnioFiltro = () => {
   const hoy = new Date();
-  return String(hoy.getFullYear()).slice(-2);
+  return String(hoy.getFullYear()).slice(-2); // últimos 2 dígitos
 };
 
-// Devuelve el mes/año actual en formato "MM/YY" (ej: "12/25")
 const obtenerMesFiltro = () => {
   const hoy = new Date();
   const mes = String(hoy.getMonth() + 1).padStart(2, "0");
@@ -29,33 +24,23 @@ const obtenerMesFiltro = () => {
   return `${mes}/${anio}`;
 };
 
-/* -----------------------------
-   Componente principal
------------------------------ */
-
 const ResumenPagos = ({ dataUsuarios, dataPagos }) => {
-  const [pagos, setPagos] = useState([]);     // Pagos registrados
-  const [usuarios, setUsuarios] = useState([]); // Usuarios con impagos
+  const [pagos, setPagos] = useState([]);
+  const [usuarios, setUsuarios] = useState([]);
   const { showModal } = useModal();
 
-  /* -----------------------------
-     Cargar datos desde API
-  ----------------------------- */
-
-  // Cargar usuarios con impagos
   useEffect(() => {
     leerPagosDesdeURL(
-      "http://localhost:8000/apiFtx/pagos/impagos",
+      `${API_URL}/pagos/impagos`,
       setUsuarios,
       showModal,
       normalizarPagos
     );
   }, []);
 
-  // Cargar todos los pagos
   useEffect(() => {
     leerPagosDesdeURL(
-      "http://localhost:8000/apiFtx/pagos",
+      `${API_URL}/pagos`,
       setPagos,
       showModal
     );
@@ -201,4 +186,3 @@ const ResumenPagos = ({ dataUsuarios, dataPagos }) => {
 };
 
 export default ResumenPagos;
-
