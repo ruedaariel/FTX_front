@@ -37,7 +37,7 @@ const SeguimientoRutinas = ({ onUsuarioChange, onRutinaChange }) => {
 
   // Cargar datos estadísticos de la rutina seleccionada
   useEffect(() => {
-    if (!rutinaSeleccionada) return;
+    if (!rutinaSeleccionada || usuarioSeleccionado.estado === "archivado") return;
 
     fetchGeneral({
       url: `${API_URL}/rutina/seguimiento/${rutinaSeleccionada.idRutina}`,

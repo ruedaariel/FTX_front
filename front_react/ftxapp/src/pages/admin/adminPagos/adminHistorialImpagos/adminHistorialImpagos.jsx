@@ -116,7 +116,7 @@ const VistaPagos = () => {
   return (
     <div className="container">
       <HeaderCrud
-        title="Historial de Pagos"
+        title="Historial de Impagos"
         widthPercent={100}
         MostrarCerrarSesion={false}
       />
