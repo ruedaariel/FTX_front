@@ -28,7 +28,7 @@ const SeguimientoRutinas = () => {
   };
 
   useEffect(() => {
-      if (!rutinaABuscar) return;
+      if (!rutinaABuscar || usuarioSeleccionado.estadoUsuario === "archivado") return;
         fetchGeneral({
         url: `${API_URL}/rutina/${rutinaABuscar.idRutina}`,
         method: "GET",
